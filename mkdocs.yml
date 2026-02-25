@@ -1,4 +1,4 @@
-site_name: "CampFire – Taller Unity (Runner + Laberinto)"
+site_name: "CampFire – Taller de introducción a GameDev en Unity"
 site_description: "Taller de introducción a Unity 3D (13–17). Endless Runner y Laberinto."
 site_author: "VivianGomez"
 repo_url: "https://github.com/VivianGomez/EjemplosPrincipiantesUnity"
@@ -21,13 +21,17 @@ theme:
 
 nav:
   - Inicio: index.md
-  - 0. Preparación: 00-preparacion.md
-  - 1. Tour rápido por Unity: 01-tour-unity.md
-  - 2. Endless Runner (carriles): 02-runner.md
-  - 3. Laberinto (meta y evento): 03-laberinto.md
-  - 5. Problemas comunes: 05-troubleshooting.md
-  - 6. Código explicado: 06-codigo-explicado.md
-  - 7. Empieza a crear tu propio juego: 07-tu-propio-juego.md
+  - DÍA 1:
+    - 0. Preparación: 00-preparacion.md
+    - 1. Tour rápido por Unity: 01-tour-unity.md
+    - 2. Endless Runner (carriles): 02-runner.md
+    - 3. Laberinto (meta y evento): 03-laberinto.md
+    - 5. Problemas comunes: 05-troubleshooting.md
+    - 6. Código explicado: 06-codigo-explicado.md
+    - 7. Empieza a crear tu propio juego: 07-tu-propio-juego.md
+  - DÍA 2:
+    - 1. Arte: modelos 3D y animaciones: 20-arte.md
+    - 2. Desplegar en itch.io: 21-itchio.md
   - Glosario: 99-glosario.md
 
 extra_css:
