@@ -3,7 +3,7 @@
 Aquí el jugador sí se mueve por el mundo y al llegar a la **Meta** se activa un evento.
 
 📸 **Foto aquí (vista de la escena Laberinto):**  
-![Laberinto escena](img/REEMPLAZAR-laberinto-escena.png)
+![Laberinto escena](img/REEMPLAZAR.png)
 
 ---
 
@@ -23,7 +23,7 @@ Aquí el jugador sí se mueve por el mundo y al llegar a la **Meta** se activa u
    - `Animator` (si hay animaciones)
 
 📸 **Foto aquí (Jugador Laberinto seleccionado):**  
-![Jugador laberinto](img/REEMPLAZAR-laberinto-jugador.png)
+![Jugador laberinto](img/REEMPLAZAR.png)
 
 Mini reto:
 - Cambia la velocidad (poquito) y prueba.
@@ -38,7 +38,7 @@ Mini reto:
    - ¿qué objeto se muestra? (UI)
 
 📸 **Foto aquí (Meta + IsTrigger + Script):**  
-![Meta](img/REEMPLAZAR-meta.png)
+![Meta](img/REEMPLAZAR.png)
 
 ---
 
@@ -51,7 +51,7 @@ Actividad:
 3. Juega y llega a la Meta: debe activarse.
 
 📸 **Foto aquí (UI desactivada):**  
-![UI](img/REEMPLAZAR-ui.png)
+![UI](img/REEMPLAZAR.png)
 
 Mini reto:
 - Cambia el texto del mensaje de victoria.

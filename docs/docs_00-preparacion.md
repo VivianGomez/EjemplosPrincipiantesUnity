@@ -8,7 +8,7 @@
 5. Create.
 
 📸 **Foto aquí (Unity Hub creando proyecto):**  
-![Unity Hub](img/REEMPLAZAR-unityhub.png)
+![Unity Hub](img/REEMPLAZAR.png)
 
 ---
 
@@ -19,7 +19,7 @@
 4. Clic en **Import**
 
 📸 **Foto aquí (ventana import package):**  
-![Import Package](img/REEMPLAZAR-import.png)
+![Import Package](img/REEMPLAZAR.png)
 
 ---
 
@@ -30,7 +30,7 @@ En el Project window busca la carpeta de escenas del paquete (ej: `Assets/Scenes
 - `EjemploLaberinto`
 
 📸 **Foto aquí (carpeta Scenes en Project):**  
-![Scenes](img/REEMPLAZAR-scenes.png)
+![Scenes](img/REEMPLAZAR.png)
 
 ---
 

@@ -9,7 +9,7 @@
 - **Console:** mensajes y errores
 
 📸 **Foto aquí (Unity con etiquetas de ventanas):**  
-![Unity UI](img/REEMPLAZAR-ventanas.png)
+![Unity UI](img/REEMPLAZAR.png)
 
 ---
 

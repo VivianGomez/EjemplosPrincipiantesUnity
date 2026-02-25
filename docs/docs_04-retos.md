@@ -15,7 +15,7 @@ Hazlos en orden. Si algo falla, vuelve atrás.
 - Haz que el contador se vea más grande o cambie de color
 
 📸 **Foto aquí (antes/después de UI):**  
-![UI antes después](img/REEMPLAZAR-ui-antes-despues.png)
+![UI antes después](img/REEMPLAZAR.png)
 
 ---
 
@@ -32,4 +32,4 @@ Hazlos en orden. Si algo falla, vuelve atrás.
 - Agrega un sonido o una partícula cuando llegas a la meta
 
 📸 **Foto aquí (efecto al ganar):**  
-![Efecto ganar](img/REEMPLAZAR-efecto.png)
+![Efecto ganar](img/REEMPLAZAR.png)

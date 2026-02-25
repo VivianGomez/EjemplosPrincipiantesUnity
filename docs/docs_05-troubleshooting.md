@@ -7,7 +7,7 @@
 - ¿El objeto `Jugador` está activo?
 
 📸 **Foto aquí (Console sin errores rojos):**  
-![Console](img/REEMPLAZAR-console.png)
+![Console](img/REEMPLAZAR.png)
 
 ---
 

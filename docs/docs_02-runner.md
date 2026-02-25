@@ -4,7 +4,7 @@ En este ejemplo el jugador **no avanza hacia adelante**.
 El truco es: **premios y obstáculos se mueven hacia el jugador**.
 
 📸 **Foto aquí (vista de la escena Runner):**  
-![Runner escena](img/REEMPLAZAR-runner-escena.png)
+![Runner escena](img/REEMPLAZAR.png)
 
 ---
 
@@ -22,7 +22,7 @@ El truco es: **premios y obstáculos se mueven hacia el jugador**.
 3. En **Inspector**, mira sus componentes.
 
 📸 **Foto aquí (Jugador seleccionado en Inspector):**  
-![Jugador](img/REEMPLAZAR-runner-jugador.png)
+![Jugador](img/REEMPLAZAR.png)
 
 ### ¿Qué deberías ver?
 - Un componente de física (por ejemplo `Rigidbody`)
@@ -42,7 +42,7 @@ Mini reto (seguro):
 - Cambia el valor de **velocidad lateral** (si existe) y prueba.
 
 📸 **Foto aquí (dónde se ajusta velocidad del jugador):**  
-![Velocidad jugador](img/REEMPLAZAR-runner-velocidad.png)
+![Velocidad jugador](img/REEMPLAZAR.png)
 
 ---
 
@@ -54,7 +54,7 @@ Actividad:
 2. Selecciónalo y mira el componente `Text`/`TextMeshPro`.
 
 📸 **Foto aquí (txtPuntos en Inspector):**  
-![txtPuntos](img/REEMPLAZAR-txtpuntos.png)
+![txtPuntos](img/REEMPLAZAR.png)
 
 Pregunta:
 - ¿Qué muestra antes de jugar? ¿y cuando recoges un premio?
@@ -75,7 +75,7 @@ Mini reto:
 - Haz que aparezcan más seguido (sin exagerar).
 
 📸 **Foto aquí (GeneradorPremios seleccionado):**  
-![GeneradorPremios](img/REEMPLAZAR-generadorpremios.png)
+![GeneradorPremios](img/REEMPLAZAR.png)
 
 ---
 
@@ -92,7 +92,7 @@ Mini reto:
 - Cambia posiciones de spawn (solo un poquito) y observa diferencias.
 
 📸 **Foto aquí (LimiteCentro y su BoxCollider IsTrigger):**  
-![Límites](img/REEMPLAZAR-limites.png)
+![Límites](img/REEMPLAZAR.png)
 
 ---
 
@@ -111,4 +111,4 @@ Mini reto:
 - Luego baja la rapidez y compara.
 
 📸 **Foto aquí (Inspector del prefab Premio/Obstaculo con rapidez):**  
-![MovimientoObjeto](img/REEMPLAZAR-movimientoobjeto.png)
+![MovimientoObjeto](img/REEMPLAZAR.png)
