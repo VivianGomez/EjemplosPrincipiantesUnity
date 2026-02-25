@@ -30,7 +30,7 @@ nav:
     - 6. Código explicado: 06-codigo-explicado.md
     - 7. Empieza a crear tu propio juego: 07-tu-propio-juego.md
   - DÍA 2:
-    - 1. Arte: modelos 3D y animaciones: 20-arte.md
+    - "1. Arte: modelos 3D y animaciones": 20-arte.md
     - 2. Desplegar en itch.io: 21-itchio.md
   - Glosario: 99-glosario.md
 
