@@ -4,6 +4,9 @@
     Entender cómo funciona el Runner: el jugador se mueve en X y **el mundo viene hacia él**.  
     Explorarás los scripts, harás cambios en el **Inspector** y luego en el **código**.
 
+!!! tip "🙋‍♀️ Ayuda"
+    🙋‍♀️ No olvides preguntarle a los mentores de Campfire si necesitas ayuda.
+
 En este ejemplo el jugador **no avanza hacia adelante**.  
 El truco es: **premios y obstáculos se mueven hacia el jugador**.
 
@@ -350,11 +353,13 @@ public float rapidez = 8f;   // ← cambia a 12f
 
 Marca cada ítem cuando lo hayas completado:
 
-- [ ] Abrí la escena `EjemploRunner` y encontré el objeto `Jugador` en Hierarchy
-- [ ] Vi los componentes del `Jugador` en Inspector (Rigidbody, Script, Collider)
-- [ ] Entiendo la diferencia entre `Start()` y `Update()`
-- [ ] Comenté/descomentée líneas en `Update()` y vi el efecto en Play
-- [ ] Encontré `GeneradorPremios` en Hierarchy y vi sus campos en Inspector
-- [ ] Identifiqué los Triggers de `ZonasGeneracionObstaculos` (Is Trigger ✓)
-- [ ] Encontré el script `MovimientoObjeto` y la variable `rapidez`
-- [ ] Completé al menos un mini reto (R-1, R-2 o R-3)
+<ul class="cf-checklist">
+  <li><label><input type="checkbox"> Abrí la escena <code>EjemploRunner</code> y encontré el objeto <code>Jugador</code> en Hierarchy</label></li>
+  <li><label><input type="checkbox"> Vi los componentes del <code>Jugador</code> en Inspector (Rigidbody, Script, Collider)</label></li>
+  <li><label><input type="checkbox"> Entiendo la diferencia entre <code>Start()</code> y <code>Update()</code></label></li>
+  <li><label><input type="checkbox"> Comenté/descomentée líneas en <code>Update()</code> y vi el efecto en Play</label></li>
+  <li><label><input type="checkbox"> Encontré <code>GeneradorPremios</code> en Hierarchy y vi sus campos en Inspector</label></li>
+  <li><label><input type="checkbox"> Identifiqué los Triggers de <code>ZonasGeneracionObstaculos</code> (Is Trigger ✓)</label></li>
+  <li><label><input type="checkbox"> Encontré el script <code>MovimientoObjeto</code> y la variable <code>rapidez</code></label></li>
+  <li><label><input type="checkbox"> Completé al menos un mini reto (R-1, R-2 o R-3)</label></li>
+</ul>

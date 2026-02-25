@@ -1,7 +1,8 @@
 /**
  * checklist.js – Checkboxes interactivos con feedback visual (sin persistencia).
  *
- * Funciona con pymdownx.tasklist (custom_checkbox: true) en MkDocs Material.
+ * Funciona con pymdownx.tasklist (custom_checkbox: true) en MkDocs Material
+ * y con <ul class="cf-checklist"> (HTML explícito).
  * Al marcar un ítem se ve tachado/atenuado; el estado NO se guarda entre recargas.
  * Compatible con navigation.instant de Material (re-ejecuta en navegación SPA
  * suscribiéndose a document$ una vez que Material lo expone).
@@ -12,33 +13,51 @@
 
   /** Inicializa o reinicializa todos los checkboxes de la página. */
   function initChecklist() {
-    var items = document.querySelectorAll(".task-list-item input[type='checkbox']");
-    if (!items.length) return;
-
-    items.forEach(function (checkbox) {
-      // Hacer el checkbox clickeable
+    // Tasklist de pymdownx
+    var taskItems = document.querySelectorAll(".task-list-item input[type='checkbox']");
+    taskItems.forEach(function (checkbox) {
       checkbox.removeAttribute("disabled");
-
-      // Evitar doble registro de eventos (por si se llama varias veces)
       checkbox.removeEventListener("change", checkbox._checklistHandler);
       checkbox._checklistHandler = function () {
-        markParent(this, this.checked);
+        markTaskParent(this, this.checked);
       };
       checkbox.addEventListener("change", checkbox._checklistHandler);
     });
 
-    // Insertar botón de reset una sola vez por página
-    injectResetButton(items);
+    // CF Checklist (HTML explícito)
+    var cfItems = document.querySelectorAll(".cf-checklist input[type='checkbox']");
+    cfItems.forEach(function (checkbox) {
+      checkbox.removeEventListener("change", checkbox._cfChecklistHandler);
+      checkbox._cfChecklistHandler = function () {
+        markCfParent(this, this.checked);
+      };
+      checkbox.addEventListener("change", checkbox._cfChecklistHandler);
+    });
+
+    // Insertar botón de reset una sola vez por página (para ambos tipos)
+    var allItems = Array.prototype.slice.call(taskItems).concat(Array.prototype.slice.call(cfItems));
+    if (allItems.length) injectResetButton(allItems);
   }
 
-  /** Agrega/quita la clase CSS de ítem completado al <li> padre. */
-  function markParent(checkbox, checked) {
+  /** Agrega/quita la clase CSS de ítem completado al <li> padre (tasklist). */
+  function markTaskParent(checkbox, checked) {
     var li = checkbox.closest(".task-list-item");
     if (!li) return;
     if (checked) {
       li.classList.add("task-checked");
     } else {
       li.classList.remove("task-checked");
+    }
+  }
+
+  /** Agrega/quita la clase CSS de ítem completado al <li> padre (cf-checklist). */
+  function markCfParent(checkbox, checked) {
+    var li = checkbox.closest("li");
+    if (!li) return;
+    if (checked) {
+      li.classList.add("cf-checked");
+    } else {
+      li.classList.remove("cf-checked");
     }
   }
 
@@ -60,7 +79,8 @@
     btn.addEventListener("click", function () {
       items.forEach(function (checkbox) {
         checkbox.checked = false;
-        markParent(checkbox, false);
+        markTaskParent(checkbox, false);
+        markCfParent(checkbox, false);
       });
     });
 

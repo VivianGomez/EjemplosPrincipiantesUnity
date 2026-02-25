@@ -4,6 +4,9 @@
     Explorar el laberinto: el jugador recorre el escenario y al llegar a la **Meta** se activa un evento de victoria.  
     Explorarás los scripts, harás cambios en el **Inspector** y luego en el **código**.
 
+!!! tip "🙋‍♀️ Ayuda"
+    🙋‍♀️ No olvides preguntarle a los mentores de Campfire si necesitas ayuda.
+
 ---
 
 ## 3.1 Objetivo del juego
@@ -324,11 +327,13 @@ public class DeteccionEvento : MonoBehaviour
 
 Marca cada ítem cuando lo hayas completado:
 
-- [ ] Abrí la escena `EjemploLaberinto` y encontré el objeto `Jugador` en Hierarchy
-- [ ] Vi los componentes del `Jugador` en Inspector (CharacterController, Script, Animator)
-- [ ] Entiendo la diferencia entre `Start()` y `Update()`
-- [ ] Comenté/descomentée secciones del `Update()` y vi el efecto en Play
-- [ ] Encontré la `Meta` y confirmé que tiene **Is Trigger ✓** activado
-- [ ] Llegué a la Meta en Play y vi el mensaje de victoria
-- [ ] Entiendo cómo funciona `DeteccionEvento.cs`
-- [ ] Completé al menos un mini reto (L-1, L-2, L-3 o L-4)
+<ul class="cf-checklist">
+  <li><label><input type="checkbox"> Abrí la escena <code>EjemploLaberinto</code> y encontré el objeto <code>Jugador</code> en Hierarchy</label></li>
+  <li><label><input type="checkbox"> Vi los componentes del <code>Jugador</code> en Inspector (CharacterController, Script, Animator)</label></li>
+  <li><label><input type="checkbox"> Entiendo la diferencia entre <code>Start()</code> y <code>Update()</code></label></li>
+  <li><label><input type="checkbox"> Comenté/descomentée secciones del <code>Update()</code> y vi el efecto en Play</label></li>
+  <li><label><input type="checkbox"> Encontré la <code>Meta</code> y confirmé que tiene <strong>Is Trigger ✓</strong> activado</label></li>
+  <li><label><input type="checkbox"> Llegué a la Meta en Play y vi el mensaje de victoria</label></li>
+  <li><label><input type="checkbox"> Entiendo cómo funciona <code>DeteccionEvento.cs</code></label></li>
+  <li><label><input type="checkbox"> Completé al menos un mini reto (L-1, L-2, L-3 o L-4)</label></li>
+</ul>

@@ -4,6 +4,9 @@
     Antes de preguntar, revisa la **Console** de Unity.  
     Los errores **rojos** son los más importantes. Léelos: suelen decir dónde está el problema.
 
+!!! tip "🙋‍♀️ Ayuda"
+    🙋‍♀️ No olvides preguntarle a los mentores de Campfire si necesitas ayuda.
+
 📸 **Foto aquí (Console con errores rojos marcados):**  
 ![Console](img/REEMPLAZAR.png)
 
@@ -60,6 +63,8 @@
 
 ## ✅ Checklist de troubleshooting
 
-- [ ] Revisé la Console antes de preguntar
-- [ ] Verifiqué que estoy en Play cuando pruebo el juego
-- [ ] Revisé los tags y colliders si hay problemas con puntos
+<ul class="cf-checklist">
+  <li><label><input type="checkbox"> Revisé la Console antes de preguntar</label></li>
+  <li><label><input type="checkbox"> Verifiqué que estoy en Play cuando pruebo el juego</label></li>
+  <li><label><input type="checkbox"> Revisé los tags y colliders si hay problemas con puntos</label></li>
+</ul>
