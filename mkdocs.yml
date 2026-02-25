@@ -1,0 +1,44 @@
+site_name: "CampFire – Taller Unity (Runner + Laberinto)"
+site_description: "Taller de introducción a Unity 3D (13–17). Endless Runner y Laberinto."
+site_author: "VivianGomez"
+repo_url: "https://github.com/VivianGomez/EjemplosPrincipiantesUnity"
+repo_name: "VivianGomez/EjemplosPrincipiantesUnity"
+
+theme:
+  name: material
+  language: es
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - toc.follow
+    - content.code.copy
+    - content.tabs.link
+  palette:
+    - scheme: default
+      primary: deep purple
+      accent: indigo
+
+nav:
+  - Inicio: index.md
+  - 0. Preparación: 00-preparacion.md
+  - 1. Tour rápido por Unity: 01-tour-unity.md
+  - 2. Endless Runner (carriles): 02-runner.md
+  - 3. Laberinto (meta y evento): 03-laberinto.md
+  - 4. Mini retos: 04-retos.md
+  - 5. Problemas comunes: 05-troubleshooting.md
+  - Glosario: 99-glosario.md
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: "https://github.com/VivianGomez"
