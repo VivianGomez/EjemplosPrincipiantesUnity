@@ -1,6 +1,7 @@
 # 3. Laberinto (meta y evento)
 
-Aquí el jugador sí se mueve por el mundo y al llegar a la **Meta** se activa un evento.
+!!! info "Objetivo de esta sección"
+    Explorar el laberinto: el jugador recorre el escenario y al llegar a la **Meta** se activa un evento de victoria.
 
 📸 **Foto aquí (vista de la escena Laberinto):**  
 ![Laberinto escena](img/REEMPLAZAR.png)
@@ -8,34 +9,44 @@ Aquí el jugador sí se mueve por el mundo y al llegar a la **Meta** se activa u
 ---
 
 ## 3.1 Objetivo del juego
-- Encontrar la **Meta**
-- Cuando entras en la Meta:
-  - aparece un mensaje/Canvas
-  - (opcional) se detiene el jugador o se muestra “¡Ganaste!”
+
+!!! success "Meta"
+    - Encontrar la **Meta** en el laberinto.
+    - Al entrar en la Meta:
+        - Aparece un mensaje/Canvas de victoria.
+        - (Opcional) El jugador se detiene o aparece "¡Ganaste!"
 
 ---
 
 ## 3.2 Jugador del laberinto
-1. En Hierarchy, selecciona `Jugador`.
-2. En Inspector busca:
-   - `CharacterController`
-   - Script de movimiento
-   - `Animator` (si hay animaciones)
+
+!!! example "Actividad"
+    1. En **Hierarchy**, selecciona el objeto `Jugador`.
+    2. En **Inspector** busca:
+        - `CharacterController`
+        - Script de movimiento
+        - `Animator` (si hay animaciones)
 
 📸 **Foto aquí (Jugador Laberinto seleccionado):**  
 ![Jugador laberinto](img/REEMPLAZAR.png)
 
-Mini reto:
-- Cambia la velocidad (poquito) y prueba.
+!!! tip "Mini reto"
+    Cambia la velocidad del jugador (poquito) y prueba cómo se siente.
 
 ---
 
 ## 3.3 La Meta (Trigger)
-1. En Hierarchy selecciona `Meta`.
-2. Asegúrate de que su `BoxCollider` tenga **Is Trigger** activado.
-3. Mira el Script:
-   - ¿qué objeto es el activador? (Jugador)
-   - ¿qué objeto se muestra? (UI)
+
+!!! note "¿Cómo funciona un Trigger?"
+    Un **Trigger** es un Collider que detecta entrada/salida de objetos  
+    **sin empujar físicamente**. Perfecto para zonas de activación.
+
+!!! example "Actividad"
+    1. En **Hierarchy**, selecciona el objeto `Meta`.
+    2. En **Inspector**, confirma que su `BoxCollider` tiene **Is Trigger** activado ✓
+    3. Mira el Script adjunto:
+        - ¿Qué objeto es el **activador**? (debería ser `Jugador`)
+        - ¿Qué objeto se **muestra**? (debería ser el Canvas de victoria)
 
 📸 **Foto aquí (Meta + IsTrigger + Script):**  
 ![Meta](img/REEMPLAZAR.png)
@@ -43,15 +54,23 @@ Mini reto:
 ---
 
 ## 3.4 UI de victoria
-Busca un objeto `UI` (Canvas) que esté desactivado al inicio.
 
-Actividad:
-1. Encuentra `UI`.
-2. Confirma que empieza desactivado (checkbox arriba a la izquierda).
-3. Juega y llega a la Meta: debe activarse.
+!!! example "Actividad"
+    1. En **Hierarchy**, encuentra el objeto `UI` (Canvas).
+    2. Confirma que **empieza desactivado** (checkbox apagado arriba a la izquierda en Inspector).
+    3. Presiona **Play**, llega a la Meta: el Canvas debe activarse.
 
-📸 **Foto aquí (UI desactivada):**  
+📸 **Foto aquí (UI desactivada en Inspector):**  
 ![UI](img/REEMPLAZAR.png)
 
-Mini reto:
-- Cambia el texto del mensaje de victoria.
+!!! tip "Mini reto"
+    Cambia el **texto del mensaje de victoria** en el componente `Text`/`TextMeshPro`.
+
+---
+
+## ✅ Checklist del Laberinto
+
+- [ ] Encontré el Jugador y vi sus componentes (CharacterController, Script)
+- [ ] Encontré la Meta y confirmé que tiene **Is Trigger** activado
+- [ ] Entiendo qué hace el script de la Meta
+- [ ] Llegué a la Meta en Play y vi el mensaje de victoria
