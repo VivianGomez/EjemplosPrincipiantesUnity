@@ -3,6 +3,8 @@
  *
  * Funciona con pymdownx.tasklist (custom_checkbox: true) en MkDocs Material.
  * El estado se guarda por URL de página, usando un índice estable por ítem.
+ * Compatible con navigation.instant de Material (re-ejecuta en navegación SPA
+ * suscribiéndose a document$ una vez que Material lo expone).
  */
 
 (function () {
@@ -84,19 +86,32 @@
 
   // --- Hooks de inicialización ---
 
-  // Carga inicial normal
-  document.addEventListener("DOMContentLoaded", initChecklist);
+  // Carga inicial (navegación normal o recarga)
+  document.addEventListener("DOMContentLoaded", function () {
+    initChecklist();
 
-  // MkDocs Material con instant loading expone document$ (Observable RxJS)
-  // Se ejecuta en cada cambio de página SPA
-  if (typeof document$ !== "undefined") {
-    document$.subscribe(function () {
-      initChecklist();
-    });
-  } else {
-    // Fallback: popstate (navegación con historial)
-    window.addEventListener("popstate", function () {
-      setTimeout(initChecklist, 150);
-    });
-  }
+    // MkDocs Material con navigation.instant expone document$ (RxJS Observable).
+    // Se subscribe aquí, dentro de DOMContentLoaded, para garantizar que Material
+    // ya haya registrado document$ en el scope global antes de intentar usarlo.
+    if (typeof document$ !== "undefined") {
+      document$.subscribe(function () {
+        initChecklist();
+      });
+    } else {
+      // Fallback: esperar a window load e intentar de nuevo (Material puede
+      // inicializar document$ ligeramente después de DOMContentLoaded).
+      window.addEventListener("load", function () {
+        if (typeof document$ !== "undefined") {
+          document$.subscribe(function () {
+            initChecklist();
+          });
+        } else {
+          // Último fallback: popstate (navegación con historial del navegador)
+          window.addEventListener("popstate", function () {
+            setTimeout(initChecklist, 150);
+          });
+        }
+      });
+    }
+  });
 })();
