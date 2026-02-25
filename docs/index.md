@@ -21,7 +21,7 @@ Vamos a explorar **2 mini-juegos** ya listos y modificarlos para entender cómo 
     - Sigue las secciones **en orden** (menú izquierdo).
     - Cada página tiene **Actividades** guiadas y **Mini retos** para probar cosas.
     - Los **✅ Checklists** te ayudan a saber si estás listo para avanzar.
-    - Puedes marcar cada ítem; el sitio recuerda tu progreso.
+    - Puedes marcar cada ítem (el estado se resetea al recargar la página).
 
 ---
 
