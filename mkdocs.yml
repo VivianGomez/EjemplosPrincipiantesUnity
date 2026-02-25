@@ -29,14 +29,23 @@ nav:
   - 5. Problemas comunes: 05-troubleshooting.md
   - Glosario: 99-glosario.md
 
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/checklist.js
+
 markdown_extensions:
   - admonition
+  - attr_list
   - toc:
       permalink: true
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
 
 extra:
   social:
