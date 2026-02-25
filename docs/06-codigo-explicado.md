@@ -365,10 +365,76 @@ flowchart TD
 
 ---
 
+### DeteccionEvento – activar la victoria
+
+**Script:** `Assets/Scripts/ScriptsEjemplo/EjemploLaberinto/DeteccionEvento.cs`
+
+Este script detecta cuando el jugador entra en la zona de la Meta y activa el mensaje de victoria.
+
+```csharp
+public class DeteccionEvento : MonoBehaviour
+{
+    [Header("Objeto que puede activar el evento (ej: Jugador)")]
+    public GameObject objetoActivador;   // Arrastra aquí el Jugador desde Hierarchy
+
+    [Header("Objeto que se muestra al detectar (ej: Canvas)")]
+    public GameObject objetoAMostrar;    // Arrastra aquí el Canvas de victoria
+```
+
+#### Start() – ocultar el Canvas al inicio
+
+```csharp
+    void Start()
+    {
+        // Asegura que el Canvas de victoria esté oculto cuando empieza el juego
+        if (objetoAMostrar != null)
+            objetoAMostrar.SetActive(false);
+    }
+```
+
+!!! abstract "Mini teoría: SetActive(false)"
+    `SetActive(false)` desactiva el GameObject: desaparece de la pantalla y sus scripts dejan de ejecutarse.  
+    `SetActive(true)` lo vuelve a activar. Es la forma más sencilla de mostrar/ocultar elementos de UI en Unity.
+
+#### OnTriggerEnter() – detectar la llegada a la Meta
+
+```csharp
+    void OnTriggerEnter(Collider otro)
+    {
+        // Compara el nombre del objeto que entró con el nombre del activador asignado
+        if (otro.name.Equals(objetoActivador.name))
+        {
+            objetoAMostrar.SetActive(true);   // Muestra el Canvas de victoria
+        }
+    }
+}
+```
+
+!!! abstract "Mini teoría: OnTriggerEnter"
+    `OnTriggerEnter` se llama automáticamente por Unity **una sola vez** en el frame  
+    en que otro Collider entra en el Trigger de este objeto.  
+    Funciona porque la `Meta` tiene un `BoxCollider` con **Is Trigger ✓** activado.
+
+#### Diagrama: flujo de DeteccionEvento
+
+```mermaid
+flowchart TD
+    A[Start] --> B[objetoAMostrar.SetActive false\nCanvas oculto]
+    C[Jugador entra al Trigger de Meta] --> D[OnTriggerEnter]
+    D --> E{otro.name ==\nobjetoActivador.name?}
+    E -->|Sí| F[objetoAMostrar.SetActive true\nCanvas visible: ¡Ganaste!]
+    E -->|No| G[No hace nada]
+```
+
+---
+
 ## ✅ Checklist
 
-- [ ] Entiendo para qué sirve `Update()` vs `FixedUpdate()`
-- [ ] Entiendo por qué se usa `Time.deltaTime` para movimiento
-- [ ] Entiendo la diferencia entre `Rigidbody.velocity` y `CharacterController.Move`
-- [ ] Puedo explicar cómo funciona `InvokeRepeating`
-- [ ] Entiendo cómo `OnTriggerEnter` detecta premios y obstáculos
+<ul class="cf-checklist">
+  <li><label><input type="checkbox"> Entiendo para qué sirve <code>Update()</code> vs <code>FixedUpdate()</code></label></li>
+  <li><label><input type="checkbox"> Entiendo por qué se usa <code>Time.deltaTime</code> para movimiento</label></li>
+  <li><label><input type="checkbox"> Entiendo la diferencia entre <code>Rigidbody.velocity</code> y <code>CharacterController.Move</code></label></li>
+  <li><label><input type="checkbox"> Puedo explicar cómo funciona <code>InvokeRepeating</code></label></li>
+  <li><label><input type="checkbox"> Entiendo cómo <code>OnTriggerEnter</code> detecta premios y obstáculos</label></li>
+  <li><label><input type="checkbox"> Entiendo cómo <code>DeteccionEvento</code> activa el mensaje de victoria</label></li>
+</ul>
