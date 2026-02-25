@@ -8,6 +8,6 @@ Este sitio guía un taller paso a paso (13–17 años) para explorar 2 escenas:
 📸 **Agrega fotos en esta carpeta:** `docs/img/`  
 Ejemplo de placeholder:
 
-![Captura aquí](img/REEMPLAZAR-captura.png)
+![Captura aquí](img/REEMPLAZAR.png)
 
 Sigue con **0. Preparación** en el menú.
