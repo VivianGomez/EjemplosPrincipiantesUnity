@@ -18,7 +18,7 @@
     5. Clic en **Create**.
 
 📸 **Foto aquí (Unity Hub creando proyecto):**  
-![Unity Hub](img/REEMPLAZAR.png)
+![Unity Hub](img/CreandoProyecto.png)
 
 ---
 
@@ -32,7 +32,7 @@
     5. Clic en **Import**.
 
 📸 **Foto aquí (ventana import package):**  
-![Import Package](img/REEMPLAZAR.png)
+![Import Package](img/ImportPackage.png)
 
 !!! warning "Ojo"
     Si aparece algún aviso de versión de Unity, acéptalo y continúa.  
@@ -52,7 +52,7 @@
     Haz doble clic en cada escena para abrirla.
 
 📸 **Foto aquí (carpeta Scenes en Project):**  
-![Scenes](img/REEMPLAZAR.png)
+![Scenes](img/CarpetaScenes.png)
 
 ---
 

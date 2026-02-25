@@ -17,7 +17,7 @@
 | **Console** | Mensajes, advertencias y errores |
 
 📸 **Foto aquí (Unity con etiquetas de ventanas):**  
-![Unity UI](img/REEMPLAZAR.png)
+![Unity UI](img/partesUnity.png)
 
 ---
 
@@ -80,8 +80,12 @@ Un Component es una "pieza de funcionalidad" que se adhiere a un GameObject:
 
 ## ✅ Checklist
 
-- [ ] Identifico las 6 ventanas principales en Unity
-- [ ] Entiendo qué es un GameObject y para qué sirve
-- [ ] Entiendo qué es un Component y puedo listar al menos 3
-- [ ] Sé que Transform está en todos los GameObjects
-- [ ] Sé que los cambios en Play se pierden al detener
+Marca cada ítem cuando lo hayas comprobado:
+
+<ul class="cf-checklist">
+  <li><label><input type="checkbox"> Identifico las 6 ventanas principales en Unity (<strong>Hierarchy, Scene, Game, Inspector, Project, Console</strong>)</label></li>
+  <li><label><input type="checkbox"> Entiendo qué es un <strong>GameObject</strong> y para qué sirve</label></li>
+  <li><label><input type="checkbox"> Entiendo qué es un <strong>Component</strong> y puedo listar al menos 3</label></li>
+  <li><label><input type="checkbox"> Sé que <strong>Transform</strong> está en todos los GameObjects</label></li>
+  <li><label><input type="checkbox"> Sé que los cambios en <strong>Play</strong> se pierden al detener</label></li>
+</ul>
