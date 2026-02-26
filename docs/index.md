@@ -8,10 +8,10 @@ Vamos a explorar **2 mini-juegos** ya listos y modificarlos para entender cómo 
 ## ¿Qué vas a hacer?
 
 !!! example "Juego 1 – Runner"
-    El jugador corre recogiendo premios y esquivando obstáculos.
-    **Truco:** En realidad solo vamos a mover los objetos hacia él, simulando que está corriendo hacia ellos 😉.
-    Controlarás el personaje moviéndolo **izquierda/derecha** para esquivar y recoger puntos.
-    Al descargar los ejemplos accederas a una versión minimalista de este juego: ![https://viviangomezcc.itch.io/vivirunner](https://viviangomezcc.itch.io/vivirunner) (Durante esta hackatón aprenderás como subir tu propio juego a la web!)
+    El jugador corre recogiendo premios y esquivando obstáculos.<br>
+    **Truco:** En realidad solo vamos a mover los objetos hacia él, simulando que está corriendo hacia ellos 😉.<br>
+    Controlarás el personaje moviéndolo **izquierda/derecha** para esquivar y recoger puntos.<br>
+    Al descargar los ejemplos accederas a una versión minimalista de este juego: [https://viviangomezcc.itch.io/vivirunner](https://viviangomezcc.itch.io/vivirunner) (Durante esta hackatón aprenderás como subir tu propio juego a la web!)
 
 📸 **Juego 1**  
 ![Ejemplo Runner](img/ejemploRunner.png)

@@ -11,12 +11,13 @@
 |---------|-----------------|
 | **Hierarchy** | Lista de objetos en la escena actual |
 | **Scene** | Vista 3D donde editas la escena |
-| **Game** | Vista de lo que "juega" la cámara |
+| **Game** | Vista de lo que "juega" la cámara (se muestra cuando das click en el botón "Play" ▶ ubicado en la mitad superior de la pantalla) |
 | **Inspector** | Donde cambias componentes y valores de un objeto |
 | **Project** | Archivos del proyecto (scripts, prefabs, escenas) |
-| **Console** | Mensajes, advertencias y errores |
+| **Console** | Mensajes, advertencias y errores ( esta justo en la zona de Project, es una pestaña (pídele a los emntores que te ayuden si no la encuentras)) |
+| **Toolbar** | Barra de controles que permite mover, rotar y escalar los objetos de juego |
 
-📸 **Foto aquí (Unity con etiquetas de ventanas):**  
+📸 **Aquí puedes ver las ventanas de Unity y sus nombres**  
 ![Unity UI](img/partesUnity.png)
 
 ---
@@ -31,9 +32,20 @@
 
 ### ¿Qué es un GameObject?
 
+![Unity UI](img/gameobjects.png)
+
 - Es la unidad básica de Unity: personajes, cámaras, luces, suelos, premios… todo es un GameObject.  
 - Aparece en la **Hierarchy** con un nombre y puede tener hijos (objetos anidados).  
 - Siempre tiene al menos un componente: **Transform**.
+
+!!! example "Actividad"
+    Un objeto de juego es, por ejemplo, cualquier objeto 3d, como un cubo, una esfera, un cilindro, un plano o una cápsula. En Unity estos son la base para contruir cualquier entorno de un juego.<br>
+    **Crea tu primer GameObject:** Un cubo que "aplastarás" para formar una pared que ayude a nuestro personaje a no caerse al avismo. Para ello, busca el símbolo "+" en la ventana Hierarchy, luego ve a **3D Object > Cube**.<br>
+    Para moverlo y "aplastarlo", usa la "Toolbar" (observa las imágenes de ejemplo abajo y si necesitas ayuda, llama alos mentores) 
+
+![Crea tu GameObjetc Cubo](img/crearGO.png)
+![Crea tu GameObjetc Cubo](img/controles.png)
+
 
 ### ¿Qué es un Component?
 
@@ -65,7 +77,7 @@ Un Component es una "pieza de funcionalidad" que se adhiere a un GameObject:
 ## Play Mode
 
 !!! warning "¡Importante! Cambios en Play se pierden"
-    - Cuando presionas **▶ Play**, puedes probar el juego.
+    - Cuando presionas **▶ Play**, puedes probar el juego (¿qué pasa si mueves el jugador hacia la "pared" que creaste? y ¿qué pasa si lo mueves hacia el otro lado?).
     - Cuando presionas **■ Stop**, Unity vuelve al estado **anterior al Play**.
     - Si cambias valores en Play, **casi siempre se pierden** al detener.
 
@@ -73,7 +85,7 @@ Un Component es una "pieza de funcionalidad" que se adhiere a un GameObject:
 
 !!! example "Mini reto – experimenta"
     1. Presiona **Play**.
-    2. En el **Inspector**, cambia un valor (por ejemplo el color de un objeto).
+    2. En el **Inspector**, cambia un valor (por ejemplo el color del piso).
     3. Presiona **Stop** y observa: ¿sigue el cambio?
 
 ---
