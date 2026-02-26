@@ -1,7 +1,7 @@
 # 0. Preparación (instalación rápida)
 
 !!! info "Objetivo de esta sección"
-    Dejar el proyecto listo en Unity para empezar el taller sin errores.
+    Crear tu proyecto en unity desde cero y descargar los ejemplos para que puedas aprender y reutilizar recursos en tu juego.
 
 !!! tip "🙋‍♀️ Ayuda"
     🙋‍♀️ No olvides preguntarle a los mentores de Campfire si necesitas ayuda.
@@ -11,28 +11,36 @@
 ## 0.1 Crear el proyecto
 
 !!! example "Actividad"
-    1. Abre **Unity Hub**.
-    2. Haz clic en **New project**.
-    3. Elige la plantilla **3D (Core)**.
-    4. Ponle un nombre al proyecto (ej: `CampFireTaller`).
-    5. Clic en **Create**.
+    1. Abre el programa **Unity Hub**.
+    2. Ve a la pestaña "Projects" y busca el botón **New project** y dale click.
+    3. Elige "Core" y la plantilla **3D (Core)**.
+    4. Ponle un nombre al proyecto, este peude ser general o el nombre que quieres darle a tu juego (ej: `MiJuego`).
+    5. Clic en **Create Project**.
 
-📸 **Foto aquí (Unity Hub creando proyecto):**  
+📸 **Si tienes la última versión de Unity Hub**  
+![Unity Hub](img/ultimaVersion.png)
+
+📸 **Si tienes versiones anteriores de Unity Hub**  
 ![Unity Hub](img/CreandoProyecto.png)
 
 ---
 
-## 0.2 Importar el .unitypackage
+## 0.2 Importar el "paquete de herramientas para Campfire" (un _.unitypackage_)
+
 
 !!! example "Actividad"
     1. Abre el enlace: **[https://github.com/VivianGomez/EjemplosPrincipiantesUnity/releases/tag/v1.0-campfire](https://github.com/VivianGomez/EjemplosPrincipiantesUnity/releases/tag/v1.0-campfire)**
     2. Busca y descarga el archivo llamado **`campfire-ejemplos-unity.unitypackage`**.
-    3. En Unity, ve a **Assets → Import Package → Custom Package…**
-    4. Selecciona el `.unitypackage` que descargaste.
+    3. Una vez finalice la descarga, en Unity, ve a **Assets → Import Package → Custom Package…**
+    4. Se abrirá el explorador de archivos, selecciona el `.unitypackage` que descargaste.
     5. Clic en **Import**.
 
-📸 **Foto aquí (ventana import package):**  
+📸 **Ventana Assets → Import Package → Custom Package**  
 ![Import Package](img/ImportPackage.png)
+
+📸 **Dar click en "import"**  
+![Import Package 2](img/importPackage2.png)
+
 
 !!! warning "Ojo"
     Si aparece algún aviso de versión de Unity, acéptalo y continúa.  
@@ -51,7 +59,7 @@
 
     Haz doble clic en cada escena para abrirla.
 
-📸 **Foto aquí (carpeta Scenes en Project):**  
+📸 **Así encontrarás la carpeta Scenes en Project:**  
 ![Scenes](img/CarpetaScenes.png)
 
 ---
