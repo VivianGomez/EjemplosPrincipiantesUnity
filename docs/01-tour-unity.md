@@ -39,9 +39,9 @@
 - Siempre tiene al menos un componente: **Transform**.
 
 !!! example "Actividad"
-    Un objeto de juego es, por ejemplo, cualquier objeto 3d, como un cubo, una esfera, un cilindro, un plano o una cápsula. En Unity estos son la base para contruir cualquier entorno de un juego.<br>
-    **Crea tu primer GameObject:** Un cubo que "aplastarás" para formar una pared que ayude a nuestro personaje a no caerse al avismo. Para ello, busca el símbolo "+" en la ventana Hierarchy, luego ve a **3D Object > Cube**.<br>
-    Para moverlo y "aplastarlo", usa la "Toolbar" (observa las imágenes de ejemplo abajo y si necesitas ayuda, llama alos mentores) 
+    Un objeto de juego es, por ejemplo, cualquier objeto 3d, como un cubo, una esfera, un cilindro, un plano o una cápsula. En Unity estos son la base para contruir cualquier entorno de un juego.<br><br>
+    **Crea tu primer GameObject:** Ve a la escena del ejemplo Runner, abrela y crea un cubo. Este cubo lo "aplastarás" para formar una pared que ayude a nuestro personaje a no caerse al avismo. Para ello, busca el símbolo "+" en la ventana Hierarchy, luego ve a **3D Object > Cube**.<br>
+    Para moverlo y "aplastarlo" (escalarlo), usa la "Toolbar" (observa las imágenes de ejemplo abajo y si necesitas ayuda, llama alos mentores) 
 
 ![Crea tu GameObjetc Cubo](img/crearGO.png)
 ![Crea tu GameObjetc Cubo](img/controles.png)
@@ -77,16 +77,21 @@ Un Component es una "pieza de funcionalidad" que se adhiere a un GameObject:
 ## Play Mode
 
 !!! warning "¡Importante! Cambios en Play se pierden"
-    - Cuando presionas **▶ Play**, puedes probar el juego (¿qué pasa si mueves el jugador hacia la "pared" que creaste? y ¿qué pasa si lo mueves hacia el otro lado?).
-    - Cuando presionas **■ Stop**, Unity vuelve al estado **anterior al Play**.
+    - Cuando presionas **▶ Play**, puedes probar el juego .
+    - Cuando presionas nuevamente ▶ Play es equivalente hacer un **■ Stop**, Unity vuelve al estado **anterior al Play**.
     - Si cambias valores en Play, **casi siempre se pierden** al detener.
 
     Guarda tus cambios importantes **antes** de entrar en Play.
 
 !!! example "Mini reto – experimenta"
     1. Presiona **Play**.
+    2. ¿qué pasa si mueves el jugador hacia la "pared" que creaste? y, ¿qué pasa si lo mueves hacia el otro lado?
+    3. Detén la ejecución presionando ▶ Play nuevamente
+
+!!! example "Mini reto – experimenta"
+    1. Presiona **Play**.
     2. En el **Inspector**, cambia un valor (por ejemplo el color del piso).
-    3. Presiona **Stop** y observa: ¿sigue el cambio?
+    3. Detén la ejecución y observa: ¿sigue el cambio?
 
 ---
 
@@ -99,5 +104,7 @@ Marca cada ítem cuando lo hayas comprobado:
   <li><label><input type="checkbox"> Entiendo qué es un <strong>GameObject</strong> y para qué sirve</label></li>
   <li><label><input type="checkbox"> Entiendo qué es un <strong>Component</strong> y puedo listar al menos 3</label></li>
   <li><label><input type="checkbox"> Sé que <strong>Transform</strong> está en todos los GameObjects</label></li>
+  <li><label><input type="checkbox"> Sé crear mis propios objetos como cubos y formas primitivas.</label></li>
+  <li><label><input type="checkbox"> Sé como usar las herramientas del toolbar (rotar, mover, escalar)</li>
   <li><label><input type="checkbox"> Sé que los cambios en <strong>Play</strong> se pierden al detener</label></li>
 </ul>
