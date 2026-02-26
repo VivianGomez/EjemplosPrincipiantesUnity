@@ -1,4 +1,4 @@
-# 3. Laberinto (meta y evento)
+# 3. Ejemplo2: Juego _Laberinto_
 
 !!! info "Objetivo de esta sección"
     Explorar el laberinto: el jugador recorre el escenario y al llegar a la **Meta** se activa un evento de victoria.  

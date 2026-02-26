@@ -1,4 +1,4 @@
-# 2. Endless Runner (carriles)
+# 2. Ejemplo1: Juego _Runner_
 
 !!! info "Objetivo de esta sección"
     Entender cómo funciona el Runner: el jugador se mueve en X y **el mundo viene hacia él**.  
