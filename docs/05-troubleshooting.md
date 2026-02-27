@@ -7,8 +7,8 @@
 !!! tip "🙋‍♀️ Ayuda"
     🙋‍♀️ No olvides preguntarle a los mentores de Campfire si necesitas ayuda.
 
-📸 **Foto aquí (Console con errores rojos marcados):**  
-![Console](img/REEMPLAZAR.png)
+📸 **Si hay errores en la ejecución podrás observalos en la consola:**  
+![Console](img/consolaErrores.png)
 
 ---
 

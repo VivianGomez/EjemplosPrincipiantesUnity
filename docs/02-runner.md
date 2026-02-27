@@ -82,7 +82,8 @@ Este script es el cerebro del jugador. Tiene tres partes importantes:
     float penalizacion = 5;   // puntos que se restan al tocar un obstáculo
     float aumento = 4;        // puntos que se suman al recoger un premio
 
-    //Esta fruncion permite detectar que algo "choca" (o "colisiona") con el objeto que tiene el script, en este caso el jugador
+    //Esta función permite detectar que algo "choca" (o "colisiona") con el objeto 
+    // que tiene el script, en este caso el jugador
     private void OnTriggerEnter(Collider other)
     {
         if (other.name.Contains("Obstaculo")) //Si choca con un obstáculo...
@@ -179,9 +180,12 @@ public class GeneradorPremios : MonoBehaviour
 
     public void GenerarPremios()
     {
-        // se genera un npumero aleatorio entre 0 y el tamaño del arreglo de posiciones (en este caso: 3) 
+        // se genera un npumero aleatorio entre 0 y el tamaño del 
+        // arreglo de posiciones (en este caso: 3) 
         int randomIndex = Random.Range(0, otrasPosiciones.Length);
-        //La función Instantiate de unity permite "generar replicas" de un GameObject (estos 'replicables' son de color azul y los llamamos Prefabs, si quieres profundizar por qué consulta con un mentor)
+
+        //La función Instantiate de unity permite "generar replicas" de un GameObject 
+        // (estos 'replicables' son de color azul y los llamamos Prefabs, si quieres profundizar por qué consulta con un mentor)
         Instantiate(cuboPrefab, otrasPosiciones[randomIndex].position, Quaternion.identity);
     }
 }
@@ -204,6 +208,7 @@ public class GeneradorPremios : MonoBehaviour
 ---
 Así expandes el arreglo de ⯈ Otras posiciones
 ![Desplegar arreglo de posiciones](img/listaDesplegable.png)
+<br>
 Así puedes mover la posición
 ![Mover la posicion generadora izquierda](img/MoverPosicionGeneradorIzq.png)
 

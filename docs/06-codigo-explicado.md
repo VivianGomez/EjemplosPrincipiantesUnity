@@ -1,4 +1,4 @@
-# 6. Código explicado
+# 6. Código explicado detalladamente
 
 !!! info "Objetivo de esta sección"
     Aquí verás el código real de cada juego desglosado línea a línea,
