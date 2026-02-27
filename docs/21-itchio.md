@@ -12,9 +12,9 @@
 
 **Itch.io** es una plataforma gratuita para publicar y compartir videojuegos independientes. Es la forma más rápida de que tus compañeros y familia puedan probar tu juego sin necesidad de instalar nada.
 
-Puedes publicar tu juego:
-- **Para PC** (ejecutable `.exe` que se descarga)
-- **Para WebGL** (se juega directo en el navegador, sin descargar nada)
+Puedes publicar tu juego:<br>
+    - **Para PC** (ejecutable `.exe` que se descarga). <br>
+    - **Para WebGL** (se juega directo en el navegador, sin descargar nada)
 
 ---
 
@@ -30,8 +30,8 @@ Antes de hacer el Build, configura la información de tu juego.
         - **Company Name**: tu nombre o el nombre de tu equipo
         - **Version**: `1.0`
 
-📸 **Foto aquí (ventana Project Settings – Player):**  
-![Player Settings](img/REEMPLAZAR.png)
+📸 Ventana Project Settings – Player:**  
+![Player Settings](img/playerSettings.png)
 
 ---
 
@@ -41,12 +41,11 @@ El **Splash Screen** es la pantalla que se muestra mientras carga el juego. Pued
 
 !!! example "Actividad – Splash Screen"
     1. En **Project Settings → Player**, busca la sección **Splash Image**.
-    2. Desactiva **Show Unity Logo** si no quieres el logo de Unity (disponible solo en planes de pago; en la versión gratuita aparece el logo de Unity obligatoriamente).
-    3. En **Logos**, puedes agregar tu propio logo haciendo clic en el **+** y arrastrando un sprite.
-    4. Cambia el **Background Color** al color que quieras para la pantalla de carga.
+    2. En **Logos**, puedes agregar tu propio logo haciendo clic en el **+** y arrastrando un sprite.
+    3. Cambia el **Background Color** al color que quieras para la pantalla de carga.
 
-📸 **Foto aquí (sección Splash Image en Player Settings):**  
-![Splash Screen](img/REEMPLAZAR.png)
+📸 **Sección Splash Image en Player Settings:**  
+![Splash Screen](img/logoPersonalizado.png)
 
 ---
 
@@ -61,8 +60,8 @@ El **Splash Screen** es la pantalla que se muestra mientras carga el juego. Pued
     5. Elige una carpeta de destino (ej: `Builds/PC/`) y espera a que termine.
     6. Cuando termine, tendrás un archivo **`.exe`** y una carpeta **`_Data`** — ambos son necesarios. Comprime todo en un **ZIP**.
 
-📸 **Foto aquí (ventana Build Settings con PC seleccionado):**  
-![Build PC](img/REEMPLAZAR.png)
+📸 **Ventana Build Settings con PC seleccionado:**  
+![Build PC](img/buildPC.png)
 
 !!! warning "No muevas el .exe solo"
     El archivo `.exe` no funciona sin su carpeta `_Data`. Siempre compártelos juntos dentro del ZIP.
@@ -77,12 +76,13 @@ El Build de WebGL permite que cualquiera juegue desde el navegador sin instalar 
     1. Ve a **File → Build Settings**.
     2. Selecciona la plataforma **WebGL** en la lista de la izquierda.
     3. Haz clic en **Switch Platform** y espera (puede tardar varios minutos).
-    4. Haz clic en **Build**.
+    4. Cuando acabe la carga, haz clic en **Build**.
     5. Elige una carpeta de destino (ej: `Builds/WebGL/`).
     6. Espera a que Unity termine de compilar. Al final tendrás una carpeta con varios archivos, incluido **`index.html`**.
+    7. Haz un zip con los archivos resultantes del Build
 
-📸 **Foto aquí (Build Settings con WebGL seleccionado):**  
-![Build WebGL](img/REEMPLAZAR.png)
+📸 **Build Settings con WebGL seleccionado:**  
+![Build WebGL](img/switchPaltform.png)
 
 ---
 
@@ -97,8 +97,8 @@ Si el Build de WebGL da error relacionado con **Auto Graphics API**, sigue estos
     4. En la lista de APIs que aparece, asegúrate de que solo quede **WebGL 2.0** (elimina las demás si hay alguna incompatible).
     5. Vuelve a hacer el Build de WebGL.
 
-📸 **Foto aquí (Other Settings con Auto Graphics API desmarcado):**  
-![Auto Graphics API](img/REEMPLAZAR.png)
+📸 **Other Settings con Auto Graphics API desmarcado:**  
+![Auto Graphics API](img/errorWebGL.png)
 
 ---
 
@@ -110,8 +110,8 @@ Si el Build de WebGL da error relacionado con **Auto Graphics API**, sigue estos
     3. Confirma tu correo electrónico.
     4. ¡Listo! Ya tienes tu cuenta de desarrollador.
 
-📸 **Foto aquí (pantalla de registro en Itch.io):**  
-![Itch.io registro](img/REEMPLAZAR.png)
+📸 **Pantalla de registro en Itch.io:**  
+![Itch.io registro](img/registroItchio.png)
 
 ---
 
@@ -123,14 +123,15 @@ Si el Build de WebGL da error relacionado con **Auto Graphics API**, sigue estos
     3. Completa los campos:
         - **Title**: nombre de tu juego
         - **Project URL**: la URL donde se va a publicar (ej: `mi-juego-campfire`)
-        - **Kind of project**: `HTML` (si es WebGL) o `Downloadable` (si es solo PC)
+        - **Kind of project**: `HTML` para ejecutarlo en la web
         - **Classification**: `Games`
     4. Sube una imagen de portada en **Cover image**.
     5. En la sección **Uploads**, sube tu archivo ZIP.
 
-📸 **Foto aquí (formulario Create new project en Itch.io):**  
-![Crear proyecto Itch.io](img/REEMPLAZAR.png)
+📸 **Formulario Create new project en Itch.io:**  
+![Crear proyecto Itch.io](img/crearProjectItchio.png)
 
+![Crear proyecto Itch.io uploads](img/uploads.png)
 ---
 
 ## Paso 7 – Embed options (WebGL en navegador)
@@ -146,12 +147,14 @@ Para que el juego se juegue directo en la página de Itch.io sin descargar nada:
         - **Height**: `600` (o el alto de tu juego)
     4. Activa **Enable fullscreen button** para que los jugadores puedan entrar a pantalla completa.
 
-📸 **Foto aquí (sección Uploads con "played in the browser" marcado):**  
-![Embed WebGL](img/REEMPLAZAR.png)
+📸 **"played in the browser" marcado:**  
+![Embed WebGL](img/jugarBrowser.png)
+
+![Embed WebGL](img/embedOptions.png)
 
 !!! warning "El ZIP debe tener index.html en la raíz"
     Si comprimes la carpeta WebGL completa, el `index.html` quedará dentro de una subcarpeta y no funcionará.  
-    **Solución**: entra a la carpeta `Builds/WebGL/`, selecciona **todos los archivos** de adentro y comprímalos directamente.
+    **Solución**: entra a la carpeta `Builds/WebGL/`, selecciona **todos los archivos** de adentro y comprímelos directamente.
 
 ---
 
@@ -163,8 +166,8 @@ Para que el juego se juegue directo en la página de Itch.io sin descargar nada:
     3. Haz clic en **Save & view page** para ver cómo queda la página.
     4. Comparte el enlace con tus compañeros y familia. 🎉
 
-📸 **Foto aquí (sección Visibility con opción Public seleccionada):**  
-![Publicar Itch.io](img/REEMPLAZAR.png)
+📸 **Sección Visibility con opción Public seleccionada:**  
+![Publicar Itch.io](img/publicarItch.png)
 
 !!! tip "Draft primero"
     Puedes dejar el proyecto en **Draft** mientras lo terminas — solo tú puedes verlo. Cámbialo a **Public** cuando esté listo.

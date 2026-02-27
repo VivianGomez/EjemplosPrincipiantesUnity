@@ -196,7 +196,7 @@ El **Skybox** es la textura que rodea toda la escena y simula el cielo o el ambi
     2. En la ventana **Lighting**, busca la sección **Environment**.
     3. Haz clic en el círculo junto a **Skybox Material** y elige un material de skybox (en la plantilla hay unos descargados, pero ¡puedes obtener más en AssetStore!).
 
-📸 **Foto aquí (ventana Lighting con Skybox resaltado):**  
+📸 **Observa aquí la ventana Lighting con Skybox resaltado):**  
 ![Skybox](img/skyboxLighting.png)
 
 !!! tip "Skyboxes gratuitos"
@@ -223,7 +223,7 @@ Una **Textura** es la imagen que se "pega" sobre el material.
 
 ---
 
-📸 **Foto aquí (Inspector del Material con Albedo resaltado):**  
+📸 **Observa el Inspector del Material con Albedo resaltado:**  
 ![Material](img/albedo.png)
 
 ---
