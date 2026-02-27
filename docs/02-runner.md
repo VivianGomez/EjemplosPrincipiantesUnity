@@ -221,7 +221,7 @@ public class GenerarCubos : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // Solo genera si el objeto que entró es el "Jugador"
+        // Solo genera si el Jugador chocó con el objeto dueño de este script
         if (other.gameObject.name == "Jugador")
         {
             int randomIndex = Random.Range(0, otrasPosiciones.Length);
@@ -236,7 +236,7 @@ public class GenerarCubos : MonoBehaviour
     1. En **Hierarchy**, expande `ZonasGeneracionObstaculos`.
     2. Selecciona `LimiteCentro` (o `LimiteIzq` / `LimiteDer`).
     3. En **Inspector** confirma:
-        - `Box Collider` con **Is Trigger ✓** activado.
+        - `Box Collider` con **Is Trigger ✅** activado.
         - Script `GenerarCubos` con su prefab asignado.
     4. Presiona **Play** y cruza el carril central: aparece un obstáculo.
 
@@ -245,6 +245,15 @@ public class GenerarCubos : MonoBehaviour
     Cuando el jugador los cruza, `OnTriggerEnter` instancia obstáculos en el carril.
 
 ---
+
+Observa en esta imagen como funciona la generación de cubos con los GameObjects "Limite", únicamente usando sus componentes BoxCollider con Trigger ✅
+![Funcionamiento de Triggers](img/funcionamientoLimites.gif)
+
+!!! example "Actividad — Inspector"
+    1. En **Inspector** intenta cambiar en **uno** de los game objects "Limite":
+        - `Box Collider` con **Is Trigger ⬜** (desactivado).
+    2. Ejecuta el juego
+    3. Observa como cambia la colisión contra ese objeto "Limite"
 
 ## 2.7 El truco del Runner: el mundo se mueve hacia ti
 
