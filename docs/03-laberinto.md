@@ -235,7 +235,7 @@ public class DeteccionEvento : MonoBehaviour
 !!! example "Actividad — Inspector"
     1. En **Hierarchy**, haz clic en el objeto `Meta`.
     2. En **Inspector** confirma:
-        - `Box Collider` con **Is Trigger ✓** activado.
+        - `Box Collider` del GameObject "Meta" con **Is Trigger ✓** activado.
         - Script `Deteccion Evento` con:
             - **Objeto Activador** → `Jugador`
             - **Objeto A Mostrar** → Canvas de victoria
@@ -251,7 +251,7 @@ Observa dónde encontrar el checkbox de activación (esta activación es VISUAL)
 ![Activación UI](img/activacionGO.png)
 
 
-Observa acá como se usa el trigger para mostrar el mensaje cuando el jugador entra en colisión <br>
+Observa acá como se usa el trigger del GameObject "Meta" para mostrar el mensaje cuando el jugador entra en colisión <br>
 ![Trigger Meta](img/triggerMeta.png)
 
 ---
