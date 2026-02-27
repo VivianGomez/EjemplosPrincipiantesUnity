@@ -43,11 +43,14 @@ Esta te puede servir para los modelos del entorno, mesas, sillas, ambientación,
 
 !!! warning "Licencias"
     Algunos modelos requieren que pongas crédito al autor. Revisa la licencia antes de usarlos en tu juego.
-    Si no entiendes cuáles son abiertas, llama a los mentores una vez selecciones el modelo que quieres para tu juego.
+    Si no entiendes cuáles licencias son "abiertas", llama a los mentores una vez selecciones el modelo que quieres para tu juego.
+
+!!! example "Reto - Importar el objeto 3D a Unity"
+    Arrastra el objeto desde la carpeta descargas a la carpeta _Assets > 3D_ y úsalo en tu escena. 
 
 ---
 
-## Opción B – Modelos del Asset Store de Unity
+## Opción B – Recursos del Asset Store de Unity
 Unity Asset Store es la tienda oficial de recursos de Unity, en ella encontrarás: objetos 3d/2d, animaciones, interfaz de usuario / menús, imágenes que simulan cielos (skyboxes), personajes y mucho más!
 Su ventaja es que está integrada directamente con el Editor de Unity, así que descargar los recursos es mucho más fácil.
 
@@ -59,40 +62,77 @@ Su ventaja es que está integrada directamente con el Editor de Unity, así que 
     5. Selecciona el asset dando click en su imagen
     6. Luego dale click al botón "Add to my Assets" y luego a "Open in Unity".
     7. Desde Unity da click en "Download" y luego, cuando se termine la descarga, se habilitará el botón "Import".
-    8. Y listo! Te aparecerá una nueva carpeta con los resursos descargados.
+    8. ¡Y listo! Te aparecerá una nueva carpeta con los recursos descargados.
 
+📸 **Visualiza los pasos aquí**  
+![Asset store](img/pasosAssetStore.jpg)
+<br>
+
+Y en Unity:<br>
+![Asset store](img/assetStoreUnity.png)
+
+!!! tip "Aclaración"
+    ¡Puedes buscar en el Asset Store muchos recursos! explóra que otras cosas puedes usar en esta herramienta para tu videojuego.
+
+!!! example "Reto - Usar recursos en Unity"
+    Usa el objeto descargado en tu escena. Nota que en algunas ocasiones, los materiales, que te permiten dar color o textura a un objeto 3d deben configurarse manualmente.
+    Pero tranquil@, basta con arrastar el objeto a la escena y luego, ponerle el material. Abajo te dejamos una imagen de referencia, pero recuerda que puedes llamar a los mentores si necesitas apoyo.
+
+ ![Reto Asset store](img/retoAssetStore.png)
+
+---
 
 ## Opción C – Hyper3D + Mixamo (modelo + animación automática)
 
-Esta opción te permite generar un modelo 3D a partir de una foto y agregarle animaciones automáticamente.
+Esta opción te va a permitir explorar más tu creatividad, prototipando los objetos 3D con tus dibujos y el uso de IA.
+Para el ejemplo, explicaremos como puedes generar personajes. Sin embargo, puedes aplicar los pasos C.1 y C.2 a cualquier objeto 3d que quieras generar.
 
-### Paso C.1 – Generar el modelo con Hyper3D (Rodin)
+### Paso C.1 – Diseña tu personaje
+!!! example "Actividad – Genera una imagen digital vectorizada a partir de tus bocetos"
+    1. Ve a **[gemini.google.com/](https://gemini.google.com/)**.
+    2. Sube una imagen de tu personaje, puedes dibujar tus bocetos a mano tomarles foto o, simplemente generar la imagen describiéndo tu personaje en texto.
+    3. Si decides usar tus bocetos, puedes usar este prompt "Crea una imagen digital vectorizada de mi personaje en pose T, pero agregale colores, usa azul para la cabeza, verde aguamarina degradado con el azul en el cuerpo y morado para las gafas y las hojas de la cabeza." e iterar hasta que logres el resultado que más te guste.
+    4. Descarga la imagen de tu personaje en pose T.
+
+![Gemini](img/pasosGemini.jpg)
+
+
+### Paso C.2 – Generar el modelo con Hyper3D (Rodin)
 
 !!! example "Actividad – Crear modelo 3D desde una imagen"
     1. Ve a **[hyper3d.ai](https://hyper3d.ai)** (o busca **Rodin 3D**).
-    2. Sube una imagen de referencia del personaje u objeto que quieras.
-    3. Espera a que se genere el modelo 3D (puede tomar 1–2 minutos).
+    2. Sube la imagen del personaje que quieras generar (ej: la del paso C.1).
+    3. Espera a que se genere el modelo 3D (puede tomar unos minutos).
     4. Descarga el modelo en formato **FBX** o **GLB**.
+    5. Aún no lo muevas a Unity, primero vamos a volverlo "animable" en el paso C.3
 
-📸 **Foto aquí (interfaz de Hyper3D generando un modelo):**  
-![Hyper3D](img/REEMPLAZAR.png)
+📸 **Visualiza los pasos aquí:**  
+![Hyper3D 1](img/hyper3D1.jpg)
+<br>
 
-### Paso C.2 – Animar el modelo con Mixamo
+Descarga el modelo en formato FBX:<br>
+![Hyper3D 2](img/descargarFBXHyper.png)
 
-[Mixamo](https://www.mixamo.com) es una herramienta gratuita de Adobe que pone animaciones a modelos 3D automáticamente.
+### Paso C.3 – Animar el modelo con Mixamo
+
+[Mixamo](https://www.mixamo.com) es una herramienta gratuita de Adobe que permite crear "esqueletos" de animación para personajes tradicionales (con piernas y brazos) de manera automática. Además, es también una biblioteca de personajes y animaciones. Así que puedes usar algunos gratuitos o subir tu propio personaje. En este taller vamos a enseñarte como usar las animaciones de Mixamo en un personaje propio.
 
 !!! example "Actividad – Animar con Mixamo"
-    1. Ve a **[mixamo.com](https://www.mixamo.com)** y crea una cuenta gratuita (o entra con Adobe ID).
+    1. Ve a **[mixamo.com](https://www.mixamo.com)** y crea una cuenta gratuita.
     2. Haz clic en **Upload Character** y sube el modelo FBX que descargaste.
     3. Mixamo intentará auto-detectar la posición del esqueleto. Ajusta si es necesario.
     4. En la pestaña **Animations**, busca y elige las animaciones que necesitas (ej: `Run`, `Jump`, `Idle`).
     5. Para cada animación, haz clic en **Download**:
         - **Format**: FBX for Unity
         - **Skin**: With Skin (para la primera descarga) / Without Skin (para animaciones adicionales)
-    6. Guarda todos los archivos descargados en una carpeta.
+    6. Guarda todos los archivos descargados en una carpeta especial para tu personaje: 3D > Carpeta para tu personaje.
 
-📸 **Foto aquí (Mixamo con auto-rigging y animaciones):**  
-![Mixamo](img/REEMPLAZAR.png)
+📸 **Visualiza los pasos de Mixamo aquí:**  
+![Mixamo](img/pasosMixamo.jpg)
+<br>
+Y descarga así:<br>
+![Mixamo2](img/descargasMixamo.png)
+
 
 !!! tip "Tip – Varias animaciones"
     Si vas a usar varias animaciones del mismo personaje, descarga la primera con **With Skin** y las demás con **Without Skin**. Así el archivo es más liviano.
@@ -129,8 +169,8 @@ Assets/
     4. Unity importará automáticamente el modelo. Verás el objeto en el panel Project.
     5. Arrastra el modelo desde el panel Project hasta la ventana **Scene** o la **Hierarchy** para colocarlo en la escena.
 
-📸 **Foto aquí (arrastrar FBX al panel Project):**  
-![Importar FBX](img/REEMPLAZAR.png)
+📸 **Ventana de proyecto con nuevo fbx**  
+![Importar FBX](img/arrastrar.png)
 
 ### Configurar el modelo importado
 
@@ -142,8 +182,8 @@ Assets/
         - Haz clic en **Apply**.
     4. En la pestaña **Animation**, verifica que las animaciones estén listadas.
 
-📸 **Foto aquí (Inspector con pestañas de importación FBX):**  
-![FBX Inspector](img/REEMPLAZAR.png)
+📸 **Observa aquí el Inspector con pestañas de importación FBX (para un objeto vs un personaje):**  
+![FBX Inspector](img/revisarFbXUnity.jpg)
 
 ---
 
@@ -154,11 +194,10 @@ El **Skybox** es la textura que rodea toda la escena y simula el cielo o el ambi
 !!! example "Actividad – Cambiar el Skybox"
     1. En Unity, ve al menú **Window → Rendering → Lighting**.
     2. En la ventana **Lighting**, busca la sección **Environment**.
-    3. Haz clic en el círculo junto a **Skybox Material** y elige un material de skybox.
-    4. Para usar uno personalizado, primero importa una textura de skybox desde la **Asset Store** o desde una imagen panorámica (formato equirectangular).
+    3. Haz clic en el círculo junto a **Skybox Material** y elige un material de skybox (en la plantilla hay unos descargados, pero ¡puedes obtener más en AssetStore!).
 
 📸 **Foto aquí (ventana Lighting con Skybox resaltado):**  
-![Skybox](img/REEMPLAZAR.png)
+![Skybox](img/skyboxLighting.png)
 
 !!! tip "Skyboxes gratuitos"
     En la **Asset Store** de Unity (Window → Asset Store) puedes buscar **skybox free** y encontrar varios paquetes gratuitos.
@@ -178,8 +217,14 @@ Una **Textura** es la imagen que se "pega" sobre el material.
     5. Haz clic en el círculo junto a **Albedo** y elige una textura importada, o haz clic en el color para cambiar el color directamente.
     6. Arrastra el material desde el panel Project al objeto en la **Scene** o la **Hierarchy**.
 
+!!! tip "Consigue texturas para el suelo y más"
+    Hay muchos sitios web con texturas, uno de ellos es [Textures Free](https://www.textures.com/free).<br> 
+    Explora las texturas gratuitas descarga una, estas son imágenes normales que puedes asociar al material de un objeto 3d. ¡Inténtalo por tu cuenta! (si necesitas ayuda, llama a los mentores).
+
+---
+
 📸 **Foto aquí (Inspector del Material con Albedo resaltado):**  
-![Material](img/REEMPLAZAR.png)
+![Material](img/albedo.png)
 
 ---
 
@@ -194,19 +239,23 @@ Los elementos de UI (botones, textos, barras de vida, puntaje) viven dentro de u
     4. Haz clic en el círculo y selecciona el sprite que quieres mostrar.
     5. Ajusta la posición y tamaño con las herramientas de **Rect Transform**.
 
-📸 **Foto aquí (Canvas con Image en Hierarchy e Inspector):**  
-![UI Image](img/REEMPLAZAR.png)
+📸 **Canvas con Image en Hierarchy e Inspector:**  
+![UI Image](img/canvasImage.png)
 
 !!! tip "Sprites 2D para UI"
     Importa imágenes PNG a Unity (arrástralas al panel Project).  
     Selecciona la imagen importada y en el **Inspector** cambia **Texture Type** a **Sprite (2D and UI)**.  
     Haz clic en **Apply**.
+    <br>
+    Para encontrar imágenes para tus menús e interfaces de usuario, busca en Unity Asset Store y filtra por recursos 2D.
 
 ---
 
+![Recursos UI](img/recursosUI.png)
+
 ## Retos de arte
 
-¡Pon en práctica lo que aprendiste! Elige uno o más retos:
+¡Pon en práctica lo que aprendiste! Elige uno o más retos, los que necesites para aplicar lo aprendido a tu propio videojuego:
 
 !!! example "Reto 1 – Personaje propio"
     Descarga o genera un modelo 3D y reemplaza el personaje por defecto de tu escena.
