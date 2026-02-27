@@ -122,15 +122,15 @@ public class PlayerController : MonoBehaviour
 
 ```mermaid
 flowchart TD
-    A[Update cada fotograma] --> B[AumentarScoreSupervivencia\nscore += Time.deltaTime]
+    A[Update cada fotograma] --> B[AumentarScoreSupervivencia<br>score += Time.deltaTime]
     A --> C[Correr<br>Input.GetAxis Horizontal<br>b.velocity.x]
-    A --> D[Saltar\nGetButtonDown Jump\n+ enSuelo]
+    A --> D[Saltar<br>GetButtonDown Jump<br>+ enSuelo]
     D -->|Sí| E[rb.AddForce hacia arriba]
     E --> F[Animator SetTrigger jump]
     B --> G[Mostrar txtPuntos]
     H[OnCollisionEnter Piso] -->|enSuelo = true| D
-    I[OnTriggerEnter] -->|Obstaculo| J[score -= penalizacion\nDestroy]
-    I -->|Premio| K[score += aumento\nDestroy]
+    I[OnTriggerEnter] -->|Obstaculo| J[score -= penalizacion<br>Destroy]
+    I -->|Premio| K[score += aumento<br>Destroy]
 ```
 
 ---
@@ -168,11 +168,11 @@ public class GeneradorPremios : MonoBehaviour
 
 ```mermaid
 flowchart TD
-    A[Start] --> B[InvokeRepeating\nevery 3 seconds]
+    A[Start] --> B[InvokeRepeating<br>every 3 seconds]
     B --> C[GenerarPremios]
-    C --> D[Random.Range\n0 .. otrasPosiciones.Length]
-    D --> E[Instantiate cuboPrefab\nen posición aleatoria]
-    E --> F[Premio aparece\nen la pista]
+    C --> D[Random.Range<br>0 .. otrasPosiciones.Length]
+    D --> E[Instantiate cuboPrefab<br>en posición aleatoria]
+    E --> F[Premio aparece<br>en la pista]
 ```
 
 ---
@@ -244,10 +244,10 @@ public class MovimientoObjeto : MonoBehaviour
 ```mermaid
 flowchart TD
     A[FixedUpdate intervalo fijo] --> B[velocity = Vector3 0, 0, -rapidez]
-    B --> C[Objeto se mueve\nhacia el jugador en -Z]
+    B --> C[Objeto se mueve<br>hacia el jugador en -Z]
     C --> D{OnTriggerEnter}
-    D -->|nombre == Destructor| E[Destroy gameObject\nobjeto eliminado]
-    D -->|nombre contiene Obstaculo / Premio| F[PlayerController\nOnTriggerEnter lo maneja]
+    D -->|nombre == Destructor| E[Destroy gameObject<br>objeto eliminado]
+    D -->|nombre contiene Obstaculo / Premio| F[PlayerController<br>OnTriggerEnter lo maneja]
 ```
 
 ---
@@ -347,20 +347,20 @@ public class MovimientoJugador : MonoBehaviour
 
 ```mermaid
 flowchart TD
-    A[Update cada fotograma] --> B[Input.GetAxis\nHorizontal + Vertical]
+    A[Update cada fotograma] --> B[Input.GetAxis<br>Horizontal + Vertical]
     B --> C{¿magnitude > 0.1?}
-    C -->|Sí| D[Quaternion.LookRotation\nRotar hacia dirección]
+    C -->|Sí| D[Quaternion.LookRotation<br>Rotar hacia dirección]
     D --> E[Animator run = true]
     C -->|No| F[Animator run = false]
     A --> G{controlador.isGrounded?}
-    G -->|Sí + Space| H[velocidadVertical =\nsqrt alturaSalto × -2 × gravedad]
+    G -->|Sí + Space| H[velocidadVertical =<br>sqrt alturaSalto × -2 × gravedad]
     H --> I[Animator jump trigger]
     G -->|En el aire| J[velocidadVertical += gravedad × deltaTime]
-    E --> K[Vector3 movimiento\n= dirección × velocidad + Y vertical]
+    E --> K[Vector3 movimiento<br>= dirección × velocidad + Y vertical]
     F --> K
     I --> K
     J --> K
-    K --> L[CharacterController.Move\nmovimiento × deltaTime]
+    K --> L[CharacterController.Move<br>movimiento × deltaTime]
 ```
 
 ---
@@ -419,10 +419,10 @@ public class DeteccionEvento : MonoBehaviour
 
 ```mermaid
 flowchart TD
-    A[Start] --> B[objetoAMostrar.SetActive false\nCanvas oculto]
+    A[Start] --> B[objetoAMostrar.SetActive false<br>Canvas oculto]
     C[Jugador entra al Trigger de Meta] --> D[OnTriggerEnter]
-    D --> E{otro.name ==\nobjetoActivador.name?}
-    E -->|Sí| F[objetoAMostrar.SetActive true\nCanvas visible: ¡Ganaste!]
+    D --> E{otro.name ==<br>objetoActivador.name?}
+    E -->|Sí| F[objetoAMostrar.SetActive true<br>Canvas visible: ¡Ganaste!]
     E -->|No| G[No hace nada]
 ```
 
