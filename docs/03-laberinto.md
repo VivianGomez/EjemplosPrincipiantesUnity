@@ -230,11 +230,6 @@ public class DeteccionEvento : MonoBehaviour
     }
 }
 ```
-Observa dónde encontrar el checkbox de activación (esta activación es VISUAL), pruebalo en el Inspector.<br>
-![Activación UI](img/activacionGO.png)
-
-
-Observa acá como se usa el trigger para mostrar el mensaje cuando el jugador entra en colisión <br>
 ![Deteccion evento](img/Deteccionevento.png)
 
 !!! example "Actividad — Inspector"
@@ -252,6 +247,11 @@ Observa acá como se usa el trigger para mostrar el mensaje cuando el jugador en
     Un **Trigger** es un Collider que detecta entrada/salida de objetos  
     **sin empujar físicamente**. Perfecto para zonas de activación invisibles.
 
+Observa dónde encontrar el checkbox de activación (esta activación es VISUAL), pruebalo en el Inspector.<br>
+![Activación UI](img/activacionGO.png)
+
+
+Observa acá como se usa el trigger para mostrar el mensaje cuando el jugador entra en colisión <br>
 ![Trigger Meta](img/triggerMeta.png)
 
 ---
