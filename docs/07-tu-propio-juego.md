@@ -67,8 +67,8 @@ No hay límite — el único requisito es que tenga el mínimo recomendado, que 
 ---
 
 !!! success "¡Felicitaciones!"
-    Estás listo para crear tu propio juego para Hackathon Campfire. 🏆
-    Recuerda: lo más importante no es que sea perfecto, sino que sea **tuyo** y que lo puedas explicar.
+    Estás listo para crear tu propio juego para Hackathon Campfire 🏆🔥<br>
+    Recuerda: lo más importante no es que sea perfecto, sino que sea **tuyo** y que lo puedas explicar.<br>
     No olvides que el equipo Campfire y sus mentores están para ayudarte a lograr esa meta que propondrás con tu equipo. !Levanta la mano cuando necesites nuestra ayuda!🙋‍♀️
 
 ---
