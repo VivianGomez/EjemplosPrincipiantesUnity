@@ -39,7 +39,7 @@
 - Siempre tiene al menos un componente: **Transform**.
 
 !!! example "Actividad"
-    Un objeto de juego es, por ejemplo, cualquier objeto 3d, como un cubo, una esfera, un cilindro, un plano o una cápsula. En Unity estos son la base para contruir cualquier entorno de un juego.<br><br>
+    Un objeto de juego es, por ejemplo, cualquier objeto 3d, como un cubo, una esfera, un cilindro, un plano o una cápsula. En Unity estos son la base para contruir cualquier entorno de un juego. De hecho, los usamos para crear el piso, los obstáculos y premios del ejemplo Runner.<br><br>
     **Crea tu primer GameObject:** Ve a la escena del ejemplo Runner, abrela y crea un cubo. Este cubo lo "aplastarás" para formar una pared que ayude a nuestro personaje a no caerse al avismo. Para ello, busca el símbolo "+" en la ventana Hierarchy, luego ve a **3D Object > Cube**.<br>
     Para moverlo y "aplastarlo" (escalarlo), usa la "Toolbar" (observa las imágenes de ejemplo abajo y si necesitas ayuda, llama alos mentores) 
 

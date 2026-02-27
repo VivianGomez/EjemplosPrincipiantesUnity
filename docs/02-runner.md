@@ -1,8 +1,10 @@
 # 2. Ejemplo1: Juego _Runner_
 
 !!! info "Objetivo de esta sección"
-    Entender cómo funciona el Runner: el jugador se mueve en X y **el mundo viene hacia él**.  
+    Entender cómo funciona el Runner: el jugador se mueve en el eje X y **el mundo viene hacia él**.  
     Explorarás los scripts, harás cambios en el **Inspector** y luego en el **código**.
+
+![Ejemplo Runner](img/ejemploRunner.png)
 
 !!! tip "🙋‍♀️ Ayuda"
     🙋‍♀️ No olvides preguntarle a los mentores de Campfire si necesitas ayuda.
@@ -27,13 +29,14 @@ El truco es: **premios y obstáculos se mueven hacia el jugador**.
     1. Abre la escena `Assets/Scenes/EscenasEjemplo/EjemploRunner.unity` (doble clic).
     2. En el panel **Hierarchy** (izquierda), localiza el objeto llamado **`Jugador`**.
     3. Haz clic en él para **seleccionarlo**.
-    4. Mira el panel **Inspector** (derecha) y anota qué componentes tiene.
+    4. Mira el panel **Inspector** (derecha) y analiza qué componentes tiene. <br>
+    Si, los viste en el paso anterior, pero ahora vamos a entender como los usamos para programar el juego.
 
-!!! note "¿Qué deberías ver en el Inspector?"
+!!! note "Repasemos ... ¿Qué deberías ver en el Inspector?"
     - **Transform** – posición, rotación, escala.
     - **Rigidbody** – física (gravedad, masa).
     - **Capsule Collider** – forma para detectar colisiones.
-    - **Player Controller (Script)** – el script que controla todo.
+    - **Player Controller (Script)** – el script que controla todo, este lo programa cada desarrollador, nosotros hicimos un ejemplo de como agregar un componente script que, en este caso, **hace que el jugador se mueva y ... algunas cosas más**.
     - **Animator** – controla las animaciones de correr/saltar.
 
 ---
@@ -55,7 +58,7 @@ Este script es el cerebro del jugador. Tiene tres partes importantes:
 
     !!! abstract "Mini teoría: ¿Qué es Start()?"
         `Start()` se ejecuta **una sola vez** cuando comienza el juego (cuando presionas Play).  
-        Se usa para preparar variables, poner valores iniciales, etc.
+        En palabras muy simples, lo usamos opara decirle al juego que valores o condiciones se tendrán al iniciar el juego... ej: preparar variables o poner valores iniciales.
 
 === "Update() – el bucle del juego"
 
@@ -73,20 +76,21 @@ Este script es el cerebro del jugador. Tiene tres partes importantes:
         `Update()` se ejecuta **una vez por frame** (60 veces por segundo aprox.).  
         Todo lo que quieras que ocurra continuamente va aquí: movimiento, lectura de teclas, etc.
 
-=== "Puntos y colisiones"
+=== "Detección de eventos (ej: score)"
 
     ```csharp
     float penalizacion = 5;   // puntos que se restan al tocar un obstáculo
     float aumento = 4;        // puntos que se suman al recoger un premio
 
+    //Esta fruncion permite detectar que algo "choca" (o "colisiona") con el objeto que tiene el script, en este caso el jugador
     private void OnTriggerEnter(Collider other)
     {
-        if (other.name.Contains("Obstaculo"))
+        if (other.name.Contains("Obstaculo")) //Si choca con un obstáculo...
         {
             score -= penalizacion;        // resta puntos
             Destroy(other.gameObject);    // elimina el obstáculo
         }
-        else if (other.name.Contains("Premio"))
+        else if (other.name.Contains("Premio")) // Si choca con un premio...
         {
             score += aumento;             // suma puntos
             Destroy(other.gameObject);    // elimina el premio
@@ -162,33 +166,47 @@ Este script es el cerebro del jugador. Tiene tres partes importantes:
 ```csharp
 public class GeneradorPremios : MonoBehaviour
 {
-    public GameObject cuboPrefab;           // el prefab del premio
+    public GameObject cuboPrefab;           // el objeto de juego del premio
     public Transform[] otrasPosiciones;     // posiciones donde puede aparecer
 
     private void Start()
     {
         // Llama a "GenerarPremios" cada 3 segundos (empieza inmediatamente)
         InvokeRepeating("GenerarPremios", 0f, 3f);
-        //                                ↑       ↑
-        //                          espera inicial  intervalo
+        //                                ↑    ↑
+        //                     espera inicial  intervalo
     }
 
     public void GenerarPremios()
     {
+        // se genera un npumero aleatorio entre 0 y el tamaño del arreglo de posiciones (en este caso: 3) 
         int randomIndex = Random.Range(0, otrasPosiciones.Length);
+        //La función Instantiate de unity permite "generar replicas" de un GameObject (estos 'replicables' son de color azul y los llamamos Prefabs, si quieres profundizar por qué consulta con un mentor)
         Instantiate(cuboPrefab, otrasPosiciones[randomIndex].position, Quaternion.identity);
     }
 }
 ```
+!!! example "Actividad — Nombre de la _variable_ que representa al premio"
+    1. ¿Notaste que el objeto de juego del premio está representado por una _variable_ llamada cuboPrefab? Eso es extraño, porque el premio es una moneda. Cuando creas _variables_ estas pueden llamarse como tu quieras, así que para mejorar el código te pedimos que cambies el nombre de esa _variable_ de "cuboPrefab" a "premio".
+    2. Guarda los cambios del script (`Ctrl+S`)
+    3. Nota que esto no cambia el comportamiento del juego, pero mejora el entendimiento del script.<br>
+    Nota: si no conoces el conceptio de _variable_, preguntale a los mentores, ellos te explicarán qué es, para qué sirve y cómo se usa.
+---
 
 !!! example "Actividad — Inspector"
     1. En **Hierarchy**, haz clic en el objeto `GeneradorPremios`.
     2. En **Inspector** verás el script con dos campos:
-        - **Cubo Prefab** – el prefab del premio asignado.
-        - **Otras Posiciones** – array de posiciones donde puede aparecer.
-    3. Presiona **Play** y observa cómo aparecen premios cada ~3 segundos.
+        - **Premio** – el objeto de juego del premio asignado ("Premio" debe ser el nombre si lo cambiaste en el paso anterior, de lo contrario dirá "Cubo Prefab"). 
+        - **Otras Posiciones** – Un conjunto de elementos (creado como un "arreglo" o _array_), en este caso, para guardar las posiciones donde puede aparecer el premio.
+    3. Expande el arreglo (⯈ Otras posiciones) y encuentra el objeto asociado al "Element 0" donde se generan los premios. Intenta acceder al objeto de juego de esa "posición".
+    4. Presiona **Play**, observa cómo aparecen premios cada ~3 segundos y qué ocurre con los premios generados en la posición que moviste.
 
 ---
+Así expandes el arreglo de ⯈ Otras posiciones
+![Desplegar arreglo de posiciones](img/listaDesplegable.png)
+Así puedes mover la posición
+![Mover la posicion generadora izquierda](img/MoverPosicionGeneradorIzq.png)
+
 
 ## 2.6 Obstáculos: aparecen al cruzar límites (triggers)
 
@@ -235,13 +253,15 @@ public class GenerarCubos : MonoBehaviour
 ```csharp
 public class MovimientoObjeto : MonoBehaviour
 {
-    public Rigidbody rb;
+    public Rigidbody rb; //se accede el componente de física (rigidbody)
     public float rapidez = 8f;   // ← velocidad a la que se mueve hacia el jugador
 
     void FixedUpdate()
     {
-        // Mueve el objeto en Z negativo (hacia el jugador)
+        // Mueve el objeto en el eje Z negativo (hacia el jugador)
         Vector3 velocidad = new Vector3(0, 0, -rapidez);
+
+        // Se accede a la velocidad y se actualiza con el vector modificado
         rb.velocity = velocidad;
     }
 
@@ -250,21 +270,29 @@ public class MovimientoObjeto : MonoBehaviour
         // Si llega al objeto "Destructor", se elimina solo
         if (other.name == "Destructor")
         {
+            //Esta función destruye un GameObject
             Destroy(gameObject);
         }
     }
 }
 ```
+!!! example "Actividad — Inspector"
+    1. Quita el signo "-" en el eje Z del vector de velocidad:   (0, 0, rapidez)
+    2. Guarda los cambios del script (`Ctrl+S`)
+    3. Ejecuta el juego y observa que ocurre con el movimiento de los objetos tras hacer ese cambio.
+        
+---
+
 
 !!! abstract "Mini teoría: FixedUpdate()"
     `FixedUpdate()` es como `Update()` pero para **física**.  
-    Se ejecuta a intervalos fijos (50 veces/segundo) para que el movimiento sea suave y preciso.
+    Se ejecuta a intervalos fijos (ej: 50 veces/segundo) para que el movimiento sea suave y preciso.
 
 !!! example "Actividad — Inspector"
     1. En el panel **Project**, busca la carpeta `Assets/Prefabs/` (o similar).
-    2. Selecciona el prefab `Premio` o `Obstaculo`.
+    2. Selecciona el prefab `Premio` u `Obstaculo`.
     3. En **Inspector** verás el script `MovimientoObjeto` con el campo **Rapidez**.
-    4. Anota el valor actual (debería ser `8`).
+    4. Observa el valor actual (debería ser `8`).
 
 ---
 
