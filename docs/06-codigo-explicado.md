@@ -123,7 +123,7 @@ public class PlayerController : MonoBehaviour
 ```mermaid
 flowchart TD
     A[Update cada fotograma] --> B[AumentarScoreSupervivencia\nscore += Time.deltaTime]
-    A --> C[Correr\nInput.GetAxis Horizontal\nrb.velocity.x]
+    A --> C[Correr<br>Input.GetAxis Horizontal<br>b.velocity.x]
     A --> D[Saltar\nGetButtonDown Jump\n+ enSuelo]
     D -->|Sí| E[rb.AddForce hacia arriba]
     E --> F[Animator SetTrigger jump]
