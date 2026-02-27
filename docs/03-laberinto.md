@@ -230,7 +230,11 @@ public class DeteccionEvento : MonoBehaviour
     }
 }
 ```
+Observa dónde encontrar el checkbox de activación (esta activación es VISUAL), pruebalo en el Inspector.
+![Activación UI](img/activacionGO.png)
 
+
+Observa acá como se usa el trigger para mostrar el mensaje cuando el jugador entra en colisión
 ![Deteccion evento](img/Deteccionevento.png)
 
 !!! example "Actividad — Inspector"
