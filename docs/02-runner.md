@@ -194,7 +194,7 @@ public class GeneradorPremios : MonoBehaviour
     1. ¿Notaste que el objeto de juego del premio está representado por una _variable_ llamada cuboPrefab? Eso es extraño, porque el premio es una moneda. Cuando creas _variables_ estas pueden llamarse como tu quieras, así que para mejorar el código te pedimos que cambies el nombre de esa _variable_ de "cuboPrefab" a "premio".
     2. Guarda los cambios del script (`Ctrl+S`)
     3. Nota que esto no cambia el comportamiento del juego, pero mejora el entendimiento del script.<br>
-    Nota: si no conoces el conceptio de _variable_, preguntale a los mentores, ellos te explicarán qué es, para qué sirve y cómo se usa.
+    🙋‍♀️: si no conoces el concepto de _variable_, pregúntale a los mentores, ellos te explicarán qué es, para qué sirve y cómo se usa.
 ---
 
 !!! example "Actividad — Inspector"

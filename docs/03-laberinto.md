@@ -22,7 +22,7 @@
     - Este juego incluye un tipo de movimiento diferente al del Runner, pues acá te puedes mover libremente por todo el entorno.
     La implementación del Player es diferente, pues usa un componente llamado **Character Controller**, en lugar de usar rigidbody. Te lo explicaremos detalladamente.
 
-![Mensaje Meta](img/mensajeMeta.png)
+![Mensaje Meta](img/mensaje.png)
 
 
 ---
