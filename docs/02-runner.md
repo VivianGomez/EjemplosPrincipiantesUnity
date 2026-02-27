@@ -180,7 +180,7 @@ public class GeneradorPremios : MonoBehaviour
 
     public void GenerarPremios()
     {
-        // se genera un npumero aleatorio entre 0 y el tamaño del 
+        // se genera un número aleatorio entre 0 y el tamaño del 
         // arreglo de posiciones (en este caso: 3) 
         int randomIndex = Random.Range(0, otrasPosiciones.Length);
 

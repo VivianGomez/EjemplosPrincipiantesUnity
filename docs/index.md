@@ -37,7 +37,7 @@ Vamos a explorar **2 mini-juegos** ya listos y modificarlos para entender cómo 
 
 !!! info "Materiales necesarios"
     - Computador con **Unity Hub** instalado y sesion iniciada con tu correo electrónico.
-    - Editor Unity 2021.3.21f1 (el que enviamos a tu correo 😀)
+    - Editor Unity [2021.3.21f1](https://download.unity3d.com/download_unity/1b156197d683/Windows64EditorInstaller/UnitySetup64-2021.3.21f1.exe) (el que enviamos a tu correo 😀)
     - El archivo **`.unitypackage`** que te permitirá acceder a los ejemplos del taller en tu prorpio proyecto (más adelante te indicaremos cómo descargar este archivo).
     - ¡Muchas ganas de experimentar, aprender, preguntar y convertirte en un/a GameDev! 🎮
 

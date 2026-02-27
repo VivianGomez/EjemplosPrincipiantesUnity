@@ -12,10 +12,11 @@
 
 !!! example "Actividad"
     1. Abre el programa **Unity Hub**.
-    2. Ve a la pestaña "Projects" y busca el botón **New project** y dale click.
-    3. Elige "Core" y la plantilla **3D (Core)**.
-    4. Ponle un nombre al proyecto, este peude ser general o el nombre que quieres darle a tu juego (ej: `MiJuego`).
-    5. Clic en **Create Project**.
+    2. Ve a la pestaña "Projects", selecciona la versión Unity [2021.3.21f1](https://download.unity3d.com/download_unity/1b156197d683/Windows64EditorInstaller/UnitySetup64-2021.3.21f1.exe)
+    3. Luego, busca el botón **New project** y dale click.
+    4. Elige "Core" y la plantilla **3D (Core)**.
+    5. Ponle un nombre al proyecto, este peude ser general o el nombre que quieres darle a tu juego (ej: `MiJuego`).
+    6. Clic en **Create Project**.
 
 📸 **Si tienes la última versión de Unity Hub**  
 ![Unity Hub](img/ultimaVersion.png)

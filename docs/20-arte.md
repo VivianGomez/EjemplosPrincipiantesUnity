@@ -15,38 +15,58 @@ Antes de buscar assets, piensa qué necesitas:
 | Tipo de recurso | Ejemplos |
 |-----------------|---------|
 | **Modelos 3D** | Personaje, enemigos, objetos coleccionables, decoración |
-| **Animaciones** | Correr, saltar, atacar, idle (quieto) |
+| **Animaciones** | Las que te permitan dar vida a tu personaje. Por ejemplo: Correr, saltar, atacar, idle (quieto), saludar...  |
 | **Texturas / Materiales** | Colores, superficies (madera, piedra, metal) |
 | **Skybox** | El "cielo" o fondo del mundo 3D |
 | **Sprites 2D** | Iconos, botones, fondo del menú, elementos de UI |
+
+Ahora que ya sabes que cosas puedes necesitar para darle vida a tu juego, vamos a analizar qué opciones tienes para conseguir esos recursos.
 
 ---
 
 ## Opción A – Sketchfab (modelos 3D listos)
 
 [Sketchfab](https://sketchfab.com) es una plataforma con miles de modelos 3D gratuitos listos para descargar.
+Esta te puede servir para los modelos del entorno, mesas, sillas, ambientación, etc.
 
 !!! example "Actividad – Descargar un modelo de Sketchfab"
     1. Ve a **[sketchfab.com](https://sketchfab.com)**.
-    2. Usa el buscador para encontrar el modelo que necesitas (ej: `low poly character`, `fantasy sword`).
-    3. Filtra por **Free** (gratuito) en el menú lateral.
-    4. Abre el modelo que te guste y haz clic en **Download**.
-    5. Elige el formato **FBX** o **glTF** (ambos funcionan en Unity).
+    2. Usa el buscador para encontrar el modelo que necesitas (ej: `fantasy room fbx`). La palabra fbx es para establecer el formato deseado.
+    3. Filtra por **Downloadable** (descargable) en el menú lateral.
+    4. Abre el modelo que te guste y asegurate de que tenga Licencia abierta (es importante atribuir a los artistas)
+    5. Haz clic en **Download**.
+    5. Elige el formato **FBX** (el que comprende Unity).
     6. Guarda el archivo en tu computador.
 
-📸 **Foto aquí (pantalla de descarga en Sketchfab):**  
-![Sketchfab download](img/REEMPLAZAR.png)
+📸 **Visualiza los pasos aquí**  
+![Sketchfab download](img/pasosSketchfab.jpg)
 
 !!! warning "Licencias"
     Algunos modelos requieren que pongas crédito al autor. Revisa la licencia antes de usarlos en tu juego.
+    Si no entiendes cuáles son abiertas, llama a los mentores una vez selecciones el modelo que quieres para tu juego.
 
 ---
 
-## Opción B – Hyper3D + Mixamo (modelo + animación automática)
+## Opción B – Modelos del Asset Store de Unity
+Unity Asset Store es la tienda oficial de recursos de Unity, en ella encontrarás: objetos 3d/2d, animaciones, interfaz de usuario / menús, imágenes que simulan cielos (skyboxes), personajes y mucho más!
+Su ventaja es que está integrada directamente con el Editor de Unity, así que descargar los recursos es mucho más fácil.
+
+!!! example "Actividad – Descargar _props_ usando Unity Asset Store"
+    1. Ve a **[Unity Asset Stote](https://assetstore.unity.com/)** desde el navegador
+    2. Inicia sesión con la misma cuenta que usaste en UnityHub
+    3. Haz una búsqueda en la barra (ej: Fantasy) y establece el filtro Price > Free ✅
+    4. Busca el asset que más te sirva para tu juego... Puedes aplicar más filtos usando la barra del lado izquierdo de la pantalla (ej: 3D > Props)
+    5. Selecciona el asset dando click en su imagen
+    6. Luego dale click al botón "Add to my Assets" y luego a "Open in Unity".
+    7. Desde Unity da click en "Download" y luego, cuando se termine la descarga, se habilitará el botón "Import".
+    8. Y listo! Te aparecerá una nueva carpeta con los resursos descargados.
+
+
+## Opción C – Hyper3D + Mixamo (modelo + animación automática)
 
 Esta opción te permite generar un modelo 3D a partir de una foto y agregarle animaciones automáticamente.
 
-### Paso B.1 – Generar el modelo con Hyper3D (Rodin)
+### Paso C.1 – Generar el modelo con Hyper3D (Rodin)
 
 !!! example "Actividad – Crear modelo 3D desde una imagen"
     1. Ve a **[hyper3d.ai](https://hyper3d.ai)** (o busca **Rodin 3D**).
@@ -57,7 +77,7 @@ Esta opción te permite generar un modelo 3D a partir de una foto y agregarle an
 📸 **Foto aquí (interfaz de Hyper3D generando un modelo):**  
 ![Hyper3D](img/REEMPLAZAR.png)
 
-### Paso B.2 – Animar el modelo con Mixamo
+### Paso C.2 – Animar el modelo con Mixamo
 
 [Mixamo](https://www.mixamo.com) es una herramienta gratuita de Adobe que pone animaciones a modelos 3D automáticamente.
 
