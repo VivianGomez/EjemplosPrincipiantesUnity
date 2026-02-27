@@ -4,6 +4,9 @@
     Explorar el laberinto: el jugador recorre el escenario y al llegar a la **Meta** se activa un evento de victoria.  
     Explorarás los scripts, harás cambios en el **Inspector** y luego en el **código**.
 
+![Ejemplo Laberinto](img/ejemploLaberinto.png)
+
+
 !!! tip "🙋‍♀️ Ayuda"
     🙋‍♀️ No olvides preguntarle a los mentores de Campfire si necesitas ayuda.
 
@@ -11,11 +14,16 @@
 
 ## 3.1 Objetivo del juego
 
-!!! success "Meta"
-    - Encontrar la **Meta** en el laberinto.
+!!! success "Nuevos elementos"
+    - Tener una **Meta** de llegada (en el espacio 3d) y detectar que se lleva a ella.
     - Al entrar en la zona de Meta:
         - Aparece un Canvas de victoria con "¡Ganaste!".
-        - El juego te indica que terminaste.
+        - Indicar el final del juego con un mensaje en UI.
+    - Este juego incluye un tipo de movimiento diferente al del Runner, pues acá te puedes mover libremente por todo el entorno.
+    La implementación del Player es diferente, pues usa un componente llamado **Character Controller**, en lugar de usar rigidbody. Te lo explicaremos detalladamente.
+
+![Mensaje Meta](img/mensajeMeta.png)
+
 
 ---
 
@@ -27,7 +35,7 @@
     3. En **Inspector** observa sus componentes:
         - **Character Controller** – maneja el movimiento sin física de Rigidbody.
         - **Movimiento Jugador (Script)** – controla dirección, salto y gravedad.
-        - **Animator** – controla las animaciones de correr/estar quieto.
+        - **Animator** – controla las animaciones de correr/saltar/estar quieto.
     4. En el script `Movimiento Jugador`, anota los valores de los campos públicos:
         - `Velocidad` (por defecto `5`)
         - `Altura Salto` (por defecto `0.5`)
@@ -54,17 +62,23 @@ Este script controla **todo el movimiento** del personaje del laberinto.
         Las variables marcadas con `public` **se pueden editar desde el Inspector** de Unity  
         sin tener que abrir el código. ¡Por eso puedes cambiarlas directamente ahí!
 
+![variablesPublicas](img/variablesPublicas.png)
+
 === "Start() – preparar componentes"
 
     ```csharp
     void Start()
     {
-        controlador = GetComponent<CharacterController>();   // obtiene el CharacterController
-        animador = GetComponent<Animator>();                 // obtiene el Animator
+        // con GetComponent se obtiene un componente del objeto de jeugo
+        // en este caso, el CharacterController (¡si! el mismo que visualizas en el Inspector)
+        controlador = GetComponent<CharacterController>();   
+        
+         // y aquí se obtiene el componente Animator
+        animador = GetComponent<Animator>();                
     }
     ```
 
-    !!! abstract "Mini teoría: ¿Qué es Start()?"
+    !!! abstract "Mini teoría: Recordemos ... ¿Qué es Start()?"
         `Start()` se ejecuta **una sola vez** al comenzar el juego.  
         Aquí se guardan referencias a componentes para usarlas después.
 
@@ -117,11 +131,13 @@ Este script controla **todo el movimiento** del personaje del laberinto.
     }
     ```
 
-    !!! abstract "Mini teoría: ¿Qué es Update()?"
+    !!! abstract "Mini teoría: Recordemos ... ¿Qué es Update()?"
         `Update()` se ejecuta **una vez por frame** (~60 veces por segundo).  
         Todo lo que deba ocurrir continuamente va aquí: leer teclas, mover, girar.
 
 ---
+
+
 
 ## 3.4 Actividad guiada: Start vs Update (comentar/descomentar)
 
@@ -184,7 +200,7 @@ Este script controla **todo el movimiento** del personaje del laberinto.
 
 ---
 
-## 3.5 La Meta (Trigger)
+## 3.5 La Meta usando Trigger para detectar un "evento"
 
 **Ruta del script:** `Assets/Scripts/ScriptsEjemplo/EjemploLaberinto/DeteccionEvento.cs`
 
@@ -215,6 +231,8 @@ public class DeteccionEvento : MonoBehaviour
 }
 ```
 
+![Deteccion evento](img/Deteccionevento.png)
+
 !!! example "Actividad — Inspector"
     1. En **Hierarchy**, haz clic en el objeto `Meta`.
     2. En **Inspector** confirma:
@@ -229,6 +247,8 @@ public class DeteccionEvento : MonoBehaviour
 !!! note "¿Cómo funciona un Trigger?"
     Un **Trigger** es un Collider que detecta entrada/salida de objetos  
     **sin empujar físicamente**. Perfecto para zonas de activación invisibles.
+
+![Trigger Meta](img/triggerMeta.png)
 
 ---
 
