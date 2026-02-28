@@ -43,4 +43,21 @@ Vamos a explorar **2 mini-juegos** ya listos y modificarlos para entender cómo 
 
 ---
 
+!!! info "Materiales necesarios"
+    - Computador con **Unity Hub** instalado y sesion iniciada con tu correo electrónico.
+    - Editor Unity [2021.3.21f1](https://download.unity3d.com/download_unity/1b156197d683/Windows64EditorInstaller/UnitySetup64-2021.3.21f1.exe) (el que enviamos a tu correo 😀)
+    - El archivo **`.unitypackage`** que te permitirá acceder a los ejemplos del taller en tu prorpio proyecto (más adelante te indicaremos cómo descargar este archivo).
+    - ¡Muchas ganas de experimentar, aprender, preguntar y convertirte en un/a GameDev! 🎮
+
+--- info "Crear y clonar repositorio de Github"
+    - Juntos vamos a crear cuenta en [https://github.com/](https://github.com/)
+    - Una vez crees tu cuenta, deberás crear el repositorio para tu videojuego
+    - Luego vamos a descargarlo en tu computador! Simplemente vas buscar el botón  "<> Code" de color verde y copiarás eñ enlace que te desplega ese botón
+    - Ahora en tu computador, crea una carpeta en la que vas a guardar tu juego
+    - Da click derecho en esa carpeta > Mostrar más opciones > Open Git Basch Here
+    - Copia esta instrucción y pégala en la consola:
+        git clone <link de tu repo>
+    - Luego da enter y espera a que termine la descarga. Te aparecerá una carpeta con el nombre de tu proyecto
+    - ¡Estás list@ para el siguiente paso!
+
 Empieza por **[0. Preparación](00-preparacion.md)** en el menú lateral.
