@@ -17,7 +17,7 @@
     4. Elige "Core" y la plantilla **3D (Core)**.
     5. Ponle un nombre al proyecto, este puede ser general o el nombre que quieres darle a tu juego (ej: `MiJuego`).
     6. Pon en Location (o Ubicacion) la carpeta dcon el nombre del proyecto que creaste en Github
-    6. Clic en **Create Project**.
+    7. Clic en **Create Project**.
 
 📸 **Si tienes la última versión de Unity Hub**  
 ![Unity Hub](img/ultimaVersion.png)
