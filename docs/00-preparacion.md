@@ -15,7 +15,8 @@
     2. Ve a la pestaña "Projects", selecciona la versión Unity [2021.3.21f1](https://download.unity3d.com/download_unity/1b156197d683/Windows64EditorInstaller/UnitySetup64-2021.3.21f1.exe)
     3. Luego, busca el botón **New project** y dale click.
     4. Elige "Core" y la plantilla **3D (Core)**.
-    5. Ponle un nombre al proyecto, este peude ser general o el nombre que quieres darle a tu juego (ej: `MiJuego`).
+    5. Ponle un nombre al proyecto, este puede ser general o el nombre que quieres darle a tu juego (ej: `MiJuego`).
+    6. Pon en Location (o Ubicacion) la carpeta dcon el nombre del proyecto que creaste en Github
     6. Clic en **Create Project**.
 
 📸 **Si tienes la última versión de Unity Hub**  
